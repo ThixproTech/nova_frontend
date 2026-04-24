@@ -318,7 +318,7 @@ const EpisodeForm = (props) => {
         formData.append("keyName", video.name);
         formData.append("content", video);
 
-        const response = await fetch(baseURL + `file/upload-file`, {
+        const response = await fetch(baseURL + `/file/upload-file`, {
           method: "POST",
           headers: {
             key: secretKey,
@@ -431,7 +431,7 @@ const EpisodeForm = (props) => {
       formData.append("keyName", video.name);
       formData.append("content", video);
 
-      const response = await fetch(baseURL + `file/upload-file`, {
+      const response = await fetch(baseURL + `/file/upload-file`, {
         method: "POST",
         headers: {
           key: secretKey,

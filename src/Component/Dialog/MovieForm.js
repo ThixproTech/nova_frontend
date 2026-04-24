@@ -421,7 +421,7 @@ const MovieDialog = (props) => {
     formData.append("folderStructure", folderStructureMovieVideo);
     formData.append("keyName", event.target.files[0]?.name);
     formData.append("content", event.target.files[0]);
-    const uploadUrl = baseURL + `file/upload-file`;
+    const uploadUrl = baseURL + `/file/upload-file`;
 
     const xhr = new XMLHttpRequest();
     xhr.open("POST", uploadUrl, true);
@@ -486,7 +486,7 @@ const MovieDialog = (props) => {
     formData.append("folderStructure", folderStructureTrailerVideo);
     formData.append("keyName", event.target.files[0]?.name);
     formData.append("content", event.target.files[0]);
-    const uploadUrl = baseURL + `file/upload-file`;
+    const uploadUrl = baseURL + `/file/upload-file`;
 
     const xhr = new XMLHttpRequest();
     xhr.open("POST", uploadUrl, true);
@@ -683,7 +683,7 @@ const MovieDialog = (props) => {
   const uploadUsingXHR = (formData) => {
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", `${baseURL}file/upload-file`, true);
+      xhr.open("POST", `${baseURL}/file/upload-file`, true);
       xhr.setRequestHeader("key", secretKey);
 
       xhr.onload = () => {
