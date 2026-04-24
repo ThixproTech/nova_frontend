@@ -241,15 +241,15 @@ const SeriesTeamMemberForm = (props) => {
     <>
       <div
         id="content-page"
-        class="content-page"
+        className="content-page"
       >
-        <div class="container-fluid">
+        <div className="container-fluid">
 
 
           <div className="iq-card mt-4">
 
             <div className="iq-card-header">
-              <h4 class="card-title">Episode</h4>
+              <h4 className="card-title">Episode</h4>
             </div>
             <div className='iq-card-header'>
 

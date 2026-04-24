@@ -377,8 +377,8 @@ const Profile = (props) => {
 
   return (
     <>
-      <div id="content-page" class="content-page">
-        <div class="container-fluid">
+      <div id="content-page" className="content-page">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-sm-12">
               <div className="iq-card mt-2">
@@ -520,16 +520,16 @@ const Profile = (props) => {
                       <div className="col-sm-12 col-md-8">
                         <div className="iq-card">
                           <div className="iq-card-header">
-                            <h4 class="card-title">Admin information</h4>
+                            <h4 className="card-title">Admin information</h4>
                           </div>
                           <div className="iq-card-body py-2">
                             <form>
-                              <div class="p-2">
-                                <div class="iq-card p-3">
-                                  <div class=" p-0">
-                                    <div class="form-group">
+                              <div className="p-2">
+                                <div className="iq-card p-3">
+                                  <div className=" p-0">
+                                    <div className="form-group">
                                       <label
-                                        class="form-control-label"
+                                        className="form-control-label"
                                         for="input-username"
                                       >
                                         Full Name
@@ -537,7 +537,7 @@ const Profile = (props) => {
                                       <input
                                         type="text"
                                         id="input-username"
-                                        class="form-control"
+                                        className="form-control"
                                         value={name}
                                         onChange={(event) => {
                                           setName(event.target.value);
@@ -561,10 +561,10 @@ const Profile = (props) => {
                                       )}
                                     </div>
                                   </div>
-                                  <div class=" p-0">
-                                    <div class="form-group">
+                                  <div className=" p-0">
+                                    <div className="form-group">
                                       <label
-                                        class="form-control-label"
+                                        className="form-control-label"
                                         for="input-email"
                                       >
                                         Email address
@@ -572,7 +572,7 @@ const Profile = (props) => {
                                       <input
                                         type="email"
                                         id="input-email"
-                                        class="form-control"
+                                        className="form-control"
                                         value={email}
                                         onChange={(event) => {
                                           setEmail(event.target.value);
@@ -597,7 +597,7 @@ const Profile = (props) => {
                                       )}
                                     </div>
                                   </div>
-                                  <div class=" p-0">
+                                  <div className=" p-0">
                                     <button
                                       className="btn btn-primary  mb-1"
                                       type="button"
@@ -608,8 +608,8 @@ const Profile = (props) => {
                                   </div>
                                 </div>
                               </div>
-                              {/* <div class="row">
-                                <div class="col-lg-12">
+                              {/* <div className="row">
+                                <div className="col-lg-12">
                                   <button
                                     className="btn btn-primary  mb-1 float-right"
                                     type="button"
@@ -628,12 +628,12 @@ const Profile = (props) => {
                                       Change Password
                                     </h4>
                                   </div>
-                                  <div class="iq-card-body p-3 ">
-                                    <div class="">
-                                      <div class="p-0">
-                                        <div class="form-group">
+                                  <div className="iq-card-body p-3 ">
+                                    <div className="">
+                                      <div className="p-0">
+                                        <div className="form-group">
                                           <label
-                                            class="form-control-label"
+                                            className="form-control-label"
                                             for="input-city"
                                           >
                                             Old Password
@@ -642,7 +642,7 @@ const Profile = (props) => {
                                             type="password"
                                             id="input-city"
                                             placeholder="Enter old password"
-                                            class="form-control"
+                                            className="form-control"
                                             value={oldPassword}
                                             onChange={(event) => {
                                               setOldPassword(
@@ -669,10 +669,10 @@ const Profile = (props) => {
                                           )}
                                         </div>
                                       </div>
-                                      <div class="p-0">
-                                        <div class="form-group">
+                                      <div className="p-0">
+                                        <div className="form-group">
                                           <label
-                                            class="form-control-label"
+                                            className="form-control-label"
                                             for="input-country"
                                           >
                                             New Password
@@ -680,7 +680,7 @@ const Profile = (props) => {
                                           <input
                                             type="password"
                                             id="input-country"
-                                            class="form-control"
+                                            className="form-control"
                                             placeholder="Enter new password"
                                             value={newPassword}
                                             onChange={(event) => {
@@ -709,10 +709,10 @@ const Profile = (props) => {
                                           )}
                                         </div>
                                       </div>
-                                      <div class="p-0">
-                                        <div class="form-group">
+                                      <div className="p-0">
+                                        <div className="form-group">
                                           <label
-                                            class="form-control-label"
+                                            className="form-control-label"
                                             for="input-country"
                                           >
                                             Confirm Password
@@ -720,7 +720,7 @@ const Profile = (props) => {
                                           <input
                                             type="password"
                                             id="input-postal-code"
-                                            class="form-control"
+                                            className="form-control"
                                             placeholder="Enter confirm password"
                                             value={confirmPassword}
                                             onChange={(event) => {
@@ -754,7 +754,7 @@ const Profile = (props) => {
                                           )}
                                         </div>
                                       </div>
-                                      <div class="">
+                                      <div className="">
                                         <button
                                           className="btn btn-primary"
                                           type="button"

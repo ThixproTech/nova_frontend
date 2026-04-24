@@ -281,18 +281,18 @@ const Setting = (props) => {
             <div className="row">
               {activeTab === "APP" ? (
                 <>
-                  <div class="col-sm-6">
-                    <div class="iq-card iq-mb-3">
+                  <div className="col-sm-6">
+                    <div className="iq-card iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">App Setting</h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <div className="mb-3 d-flex justify-content-between align-items-center">
                             <p className="m-0 custom-btn-title">
                               Enable/Disable App Status
                             </p>
-                            <label class="switch m-0 ">
+                            <label className="switch m-0 ">
                               <Switch
                                 onChange={() => handleSwitch_("app active")}
                                 checked={isAppActive}
@@ -305,13 +305,13 @@ const Setting = (props) => {
                             </label>
                           </div>
                           <form>
-                            <div class="mb-3 form-group">
-                              <label for="publishableKey" class="form-label">
+                            <div className="mb-3 form-group">
+                              <label for="publishableKey" className="form-label">
                                 Privacy Policy Link
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="policyLink"
                                 placeholder={
 
@@ -324,13 +324,13 @@ const Setting = (props) => {
                                 }
                               />
                             </div>
-                            <div class="mb-3 form-group">
-                              <label for="secretKey" class="form-label">
+                            <div className="mb-3 form-group">
+                              <label for="secretKey" className="form-label">
                                 Terms And Codition Link
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="policyText"
                                 value={termConditionLink}
                                 placeholder={`Enter Term And Codition link`
@@ -347,7 +347,7 @@ const Setting = (props) => {
                         <div className="d-flex justify-content-end ">
                           <button
                             type="button"
-                            class="btn dark-icon btn-success"
+                            className="btn dark-icon btn-success"
                             onClick={handleSubmit}
                           >
                             Submit
@@ -356,18 +356,18 @@ const Setting = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="iq-card iq-mb-3">
+                  <div className="col-sm-6">
+                    <div className="iq-card iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">
                           Firebase Notification Setting
                         </h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <form>
-                            <div class=" form-group">
-                              <label for="privateKey" class="form-label">
+                            <div className=" form-group">
+                              <label for="privateKey" className="form-label">
                                 Firebase Private Key
                               </label>
                               <textarea
@@ -402,7 +402,7 @@ const Setting = (props) => {
                         <div className="d-flex justify-content-end ">
                           <button
                             type="button"
-                            class="btn dark-icon btn-success"
+                            className="btn dark-icon btn-success"
                             onClick={handleSubmit}
                           >
                             Submit
@@ -413,21 +413,21 @@ const Setting = (props) => {
                   </div>
 
 
-                  <div class="col-sm-6 mt-3">
-                    <div class="iq-card iq-mb-3">
+                  <div className="col-sm-6 mt-3">
+                    <div className="iq-card iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">Email Setting</h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <form>
-                            <div class=" form-group">
-                              <label for="resendApiKey" class="form-label">
+                            <div className=" form-group">
+                              <label for="resendApiKey" className="form-label">
                                 Email Setting
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 placeholder={`Enter Resend API key`
                                 }
                                 id="resendApiKey"
@@ -444,7 +444,7 @@ const Setting = (props) => {
                         <div className="d-flex justify-content-end ">
                           <button
                             type="button"
-                            class="btn dark-icon btn-success"
+                            className="btn dark-icon btn-success"
                             onClick={handleSubmit}
                           >
                             Submit
@@ -454,21 +454,21 @@ const Setting = (props) => {
                     </div>
                   </div>
 
-                  <div class="col-sm-6 mt-3">
-                    <div class="iq-card iq-mb-3">
+                  <div className="col-sm-6 mt-3">
+                    <div className="iq-card iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">Shorts Duration Setting</h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <form>
-                            <div class=" form-group">
-                              <label for="durationOfShorts" class="form-label">
+                            <div className=" form-group">
+                              <label for="durationOfShorts" className="form-label">
                                 Duration of Shorts (Maximum time in seconds)
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="durationOfShorts"
                                 value={durationOfShorts}
                                 placeholder={`Enter Duration of Shorts`
@@ -485,7 +485,7 @@ const Setting = (props) => {
                         <div className="d-flex justify-content-end ">
                           <button
                             type="button"
-                            class="btn dark-icon btn-success"
+                            className="btn dark-icon btn-success"
                             onClick={handleSubmit}
                           >
                             Submit
@@ -502,18 +502,18 @@ const Setting = (props) => {
 
               {activeTab === "PAYMENT" ? (
                 <>
-                  <div class="col-sm-6 mb-3">
-                    <div class="iq-card iq-mb-3">
+                  <div className="col-sm-6 mb-3">
+                    <div className="iq-card iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">Stripe Setting</h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <div className="mb-3 d-flex justify-content-between align-items-center">
                             <p className="m-0 custom-btn-title">
                               Enable/Disable Stripe Payment Setting For App
                             </p>
-                            <label class="switch m-0 ">
+                            <label className="switch m-0 ">
                               <Switch
                                 onChange={() => handleSwitch_("stripe")}
                                 checked={stripeSwitch}
@@ -527,13 +527,13 @@ const Setting = (props) => {
                           </div>
 
                           <form>
-                            <div class="mb-3 form-group">
-                              <label for="publishableKey" class="form-label">
+                            <div className="mb-3 form-group">
+                              <label for="publishableKey" className="form-label">
                                 Publishable Key
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="publishableKey"
                                 value={stripePublishableKey}
                                 placeholder={` Stripe Publishable Key`
@@ -543,13 +543,13 @@ const Setting = (props) => {
                                 }
                               />
                             </div>
-                            <div class="mb-3 form-group">
-                              <label for="secretKey" class="form-label">
+                            <div className="mb-3 form-group">
+                              <label for="secretKey" className="form-label">
                                 Secret Key
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="secretKey"
                                 value={stripeSecretKey}
                                 placeholder={`Stripe Secret Key`
@@ -566,7 +566,7 @@ const Setting = (props) => {
                         <div className="d-flex justify-content-end ">
                           <button
                             type="button"
-                            class="btn dark-icon btn-success"
+                            className="btn dark-icon btn-success"
                             onClick={handleSubmit}
                           >
                             Submit
@@ -575,18 +575,18 @@ const Setting = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 mb-3">
-                    <div class="iq-card iq-mb-3">
+                  <div className="col-sm-6 mb-3">
+                    <div className="iq-card iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">Razorpay Setting</h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <div className="mb-3 d-flex justify-content-between align-items-center">
                             <p className="m-0 custom-btn-title">
                               Enable/Disable Razorpay Payment Setting For App
                             </p>
-                            <label class="switch m-0 ">
+                            <label className="switch m-0 ">
                               <Switch
                                 onChange={() => handleSwitch_("razorPay")}
                                 checked={razorPaySwitch}
@@ -599,13 +599,13 @@ const Setting = (props) => {
                             </label>
                           </div>
                           <form>
-                            <div class="mb-3 form-group">
-                              <label for="publishableKey" class="form-label">
+                            <div className="mb-3 form-group">
+                              <label for="publishableKey" className="form-label">
                                 Razorpay key ID
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="publishableKey"
                                 value={razorPayKeyId}
                                 placeholder={` RazorPay Id`
@@ -615,13 +615,13 @@ const Setting = (props) => {
                                 }
                               />
                             </div>
-                            <div class="mb-3 form-group">
-                              <label for="secretKey" class="form-label">
+                            <div className="mb-3 form-group">
+                              <label for="secretKey" className="form-label">
                                 Secret Key
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="secretKey"
                                 value={razorSecretKey}
                                 placeholder={`Razorpay Secret Key`
@@ -638,7 +638,7 @@ const Setting = (props) => {
                         <div className="d-flex justify-content-end ">
                           <button
                             type="button"
-                            class="btn dark-icon btn-success"
+                            className="btn dark-icon btn-success"
                             onClick={handleSubmit}
                           >
                             Submit
@@ -647,19 +647,19 @@ const Setting = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="iq-card iq-mb-3">
+                  <div className="col-sm-6">
+                    <div className="iq-card iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">Flutter Wave Setting</h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <div className="mb-3 d-flex justify-content-between align-items-center">
                             <p className="m-0 custom-btn-title">
                               Enable/Disable Flutter Wave Payment Setting For
                               App
                             </p>
-                            <label class="switch m-0 ">
+                            <label className="switch m-0 ">
                               <Switch
                                 onChange={() => handleSwitch_("flutterWave")}
                                 checked={flutterWaveSwitch}
@@ -672,13 +672,13 @@ const Setting = (props) => {
                             </label>
                           </div>
                           <form>
-                            <div class="mb-3 form-group">
-                              <label for="publishableKey" class="form-label">
+                            <div className="mb-3 form-group">
+                              <label for="publishableKey" className="form-label">
                                 Flutter Wave ID
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="flutterWaveId"
                                 placeholder={`FlutterWave Key`
                                 }
@@ -695,7 +695,7 @@ const Setting = (props) => {
                         <div className="d-flex justify-content-end ">
                           <button
                             type="button"
-                            class="btn dark-icon btn-success"
+                            className="btn dark-icon btn-success"
                             onClick={handleSubmit}
                           >
                             Submit
@@ -704,19 +704,19 @@ const Setting = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="iq-card h-100 iq-mb-3">
+                  <div className="col-sm-6">
+                    <div className="iq-card h-100 iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">Google play Setting</h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <div className=" d-flex justify-content-between align-items-center">
                             <p className="m-0 custom-btn-title">
                               Enable/Disable Google Play Payment Setting For
                               App
                             </p>
-                            <label class="switch m-0 ">
+                            <label className="switch m-0 ">
                               <Switch
                                 onChange={() => handleSwitch_("googlePlay")}
                                 checked={googlePlaySwitch}
@@ -741,21 +741,21 @@ const Setting = (props) => {
 
               {activeTab === "STORAGE" ? (
                 <>
-                  <div class="col-sm-6 mb-3">
-                    <div class="iq-card iq-mb-3">
+                  <div className="col-sm-6 mb-3">
+                    <div className="iq-card iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">Digital Ocean Setting</h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <form className="row">
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="doEndpoint" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="doEndpoint" className="form-label">
                                 Endpoint
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="doEndpoint"
                                 value={doEndpoint}
                                 placeholder={"Endpoint"
@@ -772,13 +772,13 @@ const Setting = (props) => {
                                 e.g. https://bucketname.region.digitaloceanspaces.com
                               </p>
                             </div>
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="doHostname" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="doHostname" className="form-label">
                                 Hostname
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="doHostname"
                                 value={doHostname}
                                 placeholder={"Host name"
@@ -797,13 +797,13 @@ const Setting = (props) => {
 
                               </p>
                             </div>
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="doSecretKey" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="doSecretKey" className="form-label">
                                 Secret Key
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="doSecretKey"
                                 value={doSecretKey}
                                 placeholder={"Secret Key"
@@ -811,13 +811,13 @@ const Setting = (props) => {
                                 onChange={(e) => setdoSecretKey(e.target.value)}
                               />
                             </div>
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="doAccessKey" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="doAccessKey" className="form-label">
                                 Access Key
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="doAccessKey"
                                 value={doAccessKey}
                                 placeholder={"Access Key"
@@ -825,13 +825,13 @@ const Setting = (props) => {
                                 onChange={(e) => setdoAccessKey(e.target.value)}
                               />
                             </div>
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="doBucketName" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="doBucketName" className="form-label">
                                 Bucket Name
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="doBucketName"
                                 value={doBucketName}
                                 placeholder={"Bucket Name"
@@ -841,13 +841,13 @@ const Setting = (props) => {
                                 }
                               />
                             </div>
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="doRegion" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="doRegion" className="form-label">
                                 Region
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="doRegion"
                                 value={doRegion}
                                 placeholder={"Region"
@@ -862,7 +862,7 @@ const Setting = (props) => {
                         <div className="d-flex justify-content-end ">
                           <button
                             type="button"
-                            class="btn dark-icon btn-success"
+                            className="btn dark-icon btn-success"
                             onClick={handleSubmit}
                           >
                             Submit
@@ -871,21 +871,21 @@ const Setting = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 mb-3">
-                    <div class="iq-card iq-mb-3">
+                  <div className="col-sm-6 mb-3">
+                    <div className="iq-card iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">AWS Setting</h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <form className="row">
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="awsEndpoint" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="awsEndpoint" className="form-label">
                                 Endpoint
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="awsEndpoint"
                                 value={awsEndpoint}
                                 placeholder={"Endpoint"
@@ -902,13 +902,13 @@ const Setting = (props) => {
                                 e.g. https://bucketname.s3.region.amazonaws.com
                               </p>
                             </div>
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="awsHostname" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="awsHostname" className="form-label">
                                 Hostname
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="awsHostname"
                                 value={awsHostname}
                                 placeholder={"Host Name"
@@ -926,13 +926,13 @@ const Setting = (props) => {
 
                               </p>
                             </div>
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="awsSecretKey" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="awsSecretKey" className="form-label">
                                 Secret Key
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="awsSecretKey"
                                 value={awsSecretKey}
                                 placeholder={"Secret Key"
@@ -942,13 +942,13 @@ const Setting = (props) => {
                                 }
                               />
                             </div>
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="awsAccessKey" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="awsAccessKey" className="form-label">
                                 Access Key
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="awsAccessKey"
                                 value={awsAccessKey}
                                 placeholder={"Access Key"
@@ -958,13 +958,13 @@ const Setting = (props) => {
                                 }
                               />
                             </div>
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="awsBucketName" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="awsBucketName" className="form-label">
                                 Bucket Name
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="awsBucketName"
                                 value={awsBucketName}
                                 placeholder={"Bucket Name"
@@ -974,13 +974,13 @@ const Setting = (props) => {
                                 }
                               />
                             </div>
-                            <div class=" col-6 mb-3 form-group">
-                              <label for="awsRegion" class="form-label">
+                            <div className=" col-6 mb-3 form-group">
+                              <label for="awsRegion" className="form-label">
                                 Region
                               </label>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="awsRegion"
                                 value={awsRegion}
                                 placeholder={"Region"
@@ -995,7 +995,7 @@ const Setting = (props) => {
                         <div className="d-flex justify-content-end ">
                           <button
                             type="button"
-                            class="btn dark-icon btn-success"
+                            className="btn dark-icon btn-success"
                             onClick={handleSubmit}
                           >
                             Submit
@@ -1004,16 +1004,16 @@ const Setting = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 mt-3">
-                    <div class="iq-card iq-mb-3">
+                  <div className="col-sm-6 mt-3">
+                    <div className="iq-card iq-mb-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">Storage Setting</h4>
                       </div>
-                      <div class="iq-card-body  pr-0">
-                        <div class=" p-3">
+                      <div className="iq-card-body  pr-0">
+                        <div className=" p-3">
                           <div className=" d-flex justify-content-between align-items-center">
                             <p className="m-0 fw-bold">Local</p>
-                            <label class="switch m-0">
+                            <label className="switch m-0">
                               <Switch
                                 checked={localStorage === true ? true : false}
                                 color="primary"
@@ -1027,7 +1027,7 @@ const Setting = (props) => {
                           </div>
                           <div className=" d-flex justify-content-between align-items-center">
                             <p className="m-0  fw-bold">AWS S3</p>
-                            <label class="switch m-0 ">
+                            <label className="switch m-0 ">
                               <Switch
                                 checked={awsS3Storage === true ? true : false}
                                 color="primary"
@@ -1042,7 +1042,7 @@ const Setting = (props) => {
 
                           <div className=" d-flex justify-content-between align-items-center">
                             <p className="m-0 fw-bold">Digital Ocean Space</p>
-                            <label class="switch m-0 ">
+                            <label className="switch m-0 ">
                               <Switch
                                 checked={
                                   digitalOceanStorage === true ? true : false
@@ -1064,7 +1064,7 @@ const Setting = (props) => {
                         <div className="d-flex justify-content-end ">
                           <button
                             type="button"
-                            class="btn dark-icon btn-success"
+                            className="btn dark-icon btn-success"
                             onClick={handleSaveStorage}
                           >
                             Submit

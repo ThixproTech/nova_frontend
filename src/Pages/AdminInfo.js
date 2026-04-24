@@ -93,27 +93,27 @@ const AdminInfo = () => {
   };
   return (
     <>
-      <div id="content-page" class="content-page">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="iq-card">
-                <div class="iq-card-body admininfo">
-                  <div class="iq-edit-list">
-                    <ul class="iq-edit-profile d-flex nav nav-pills">
-                      <li class="col-md-6 p-0">
+      <div id="content-page" className="content-page">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="iq-card">
+                <div className="iq-card-body admininfo">
+                  <div className="iq-edit-list">
+                    <ul className="iq-edit-profile d-flex nav nav-pills">
+                      <li className="col-md-6 p-0">
                         <NavLink
-                          class="nav-link"
+                          className="nav-link"
                           data-toggle="pill"
                           to="/admin/profile"
                         >
                           Admin Information
                         </NavLink>
                       </li>
-                      <li class="col-md-6 p-0">
+                      <li className="col-md-6 p-0">
                         <a
                           href="#personal-information"
-                          class="nav-link active"
+                          className="nav-link active"
                           data-toggle="pill"
                         >
                           Change Password

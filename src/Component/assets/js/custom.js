@@ -134,7 +134,7 @@ import $ from "jquery";
         buttonHeight = jQuery(this).height();
 
       // Add the element
-      jQuery(this).prepend("<span class='ripple'></span>");
+      jQuery(this).prepend("<span className='ripple'></span>");
 
       // Make it round!
       if (buttonWidth >= buttonHeight) {
@@ -235,8 +235,8 @@ import $ from "jquery";
         autoplay: jQuerycarousel.data("autoplay"),
         autoplayTimeout: jQuerycarousel.data("autoplay-timeout"),
         navText: [
-          "<i class='fa fa-angle-left fa-2x'></i>",
-          "<i class='fa fa-angle-right fa-2x'></i>",
+          "<i className='fa fa-angle-left fa-2x'></i>",
+          "<i className='fa fa-angle-right fa-2x'></i>",
         ],
         responsiveClass: true,
         responsive: {
@@ -367,8 +367,8 @@ import $ from "jquery";
           },
         },
       ],
-      nextArrow: '<a href="#" class="ri-arrow-left-s-line left"></a>',
-      prevArrow: '<a href="#" class="ri-arrow-right-s-line right"></a>',
+      nextArrow: '<a href="#" className="ri-arrow-left-s-line left"></a>',
+      prevArrow: '<a href="#" className="ri-arrow-right-s-line right"></a>',
     });
 
     jQuery("#post-slider").slick({
@@ -398,8 +398,8 @@ import $ from "jquery";
           },
         },
       ],
-      nextArrow: '<a href="#" class="ri-arrow-left-s-line left"></a>',
-      prevArrow: '<a href="#" class="ri-arrow-right-s-line right"></a>',
+      nextArrow: '<a href="#" className="ri-arrow-left-s-line left"></a>',
+      prevArrow: '<a href="#" className="ri-arrow-right-s-line right"></a>',
     });
 
     jQuery("#card-slider").slick({
@@ -431,8 +431,8 @@ import $ from "jquery";
           },
         },
       ],
-      // nextArrow: '<a href="#" class="ri-arrow-left-s-line left"></a>',
-      // prevArrow: '<a href="#" class="ri-arrow-right-s-line right"></a>',
+      // nextArrow: '<a href="#" className="ri-arrow-left-s-line left"></a>',
+      // prevArrow: '<a href="#" className="ri-arrow-right-s-line right"></a>',
     });
 
     jQuery("#product-additional-slider").slick({
@@ -462,8 +462,8 @@ import $ from "jquery";
           },
         },
       ],
-      nextArrow: '<a href="#" class="ri-arrow-left-s-line left"></a>',
-      prevArrow: '<a href="#" class="ri-arrow-right-s-line right"></a>',
+      nextArrow: '<a href="#" className="ri-arrow-left-s-line left"></a>',
+      prevArrow: '<a href="#" className="ri-arrow-right-s-line right"></a>',
     });
 
     jQuery("#related-slider").slick({
@@ -493,8 +493,8 @@ import $ from "jquery";
           },
         },
       ],
-      nextArrow: '<a href="#" class="ri-arrow-left-s-line left"></a>',
-      prevArrow: '<a href="#" class="ri-arrow-right-s-line right"></a>',
+      nextArrow: '<a href="#" className="ri-arrow-left-s-line left"></a>',
+      prevArrow: '<a href="#" className="ri-arrow-right-s-line right"></a>',
     });
 
     jQuery(".slick-slider11").slick({
@@ -528,8 +528,8 @@ import $ from "jquery";
           },
         },
       ],
-      nextArrow: '<a href="#" class="ri-arrow-left-s-line left"></a>',
-      prevArrow: '<a href="#" class="ri-arrow-right-s-line right"></a>',
+      nextArrow: '<a href="#" className="ri-arrow-left-s-line left"></a>',
+      prevArrow: '<a href="#" className="ri-arrow-right-s-line right"></a>',
     });
 
     /*---------------------------------------------------------------------

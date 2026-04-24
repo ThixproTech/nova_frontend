@@ -16,7 +16,7 @@ search.addWidget(
 const renderClearRefinements = (renderOptions, isFirstRender) => {
     const { hasRefinements, refine } = renderOptions;
     document.querySelector('#clear-refinements').innerHTML = `
-    <button ${!hasRefinements ? 'disabled' : ''} id="clear-result" class="btn btn-primary border-0 btn-sm mr-2"><i class="ri-refresh-line mr-0"></i></button>`;
+    <button ${!hasRefinements ? 'disabled' : ''} id="clear-result" className="btn btn-primary border-0 btn-sm mr-2"><i className="ri-refresh-line mr-0"></i></button>`;
     const button = document.querySelector('#clear-result');
     button.addEventListener('click', () => {
         refine();
@@ -39,17 +39,17 @@ const renderRefinementList = (renderOptions, isFirstRender) => {
 	const container = document.querySelector('#brand-list');
 
 	container.innerHTML = `
-    <ul class="list-group iq-list-style-1">
+    <ul className="list-group iq-list-style-1">
       ${items
 		.map(
 			item => `
-            <li class="mb-2 mr-0">
-				<div class="d-flex justify-content-between">
-					<div class="custom-control custom-checkbox">
-					  <input type="checkbox" class="custom-control-input brand-checkbox" id="customCheck1${item.value}" data-value="${item.value}" value="" ${item.isRefined ? 'checked' : ''}>
-					  <label class="custom-control-label" for="customCheck1${item.value}">${item.label}</label>
+            <li className="mb-2 mr-0">
+				<div className="d-flex justify-content-between">
+					<div className="custom-control custom-checkbox">
+					  <input type="checkbox" className="custom-control-input brand-checkbox" id="customCheck1${item.value}" data-value="${item.value}" value="" ${item.isRefined ? 'checked' : ''}>
+					  <label className="custom-control-label" for="customCheck1${item.value}">${item.label}</label>
 					</div>
-					<span class="badge iq-bg-primary">(${item.count})</span>
+					<span className="badge iq-bg-primary">(${item.count})</span>
 				</div>
             </li>`
 		)
@@ -83,17 +83,17 @@ search.addWidget(
 				return `
         <a
           href="${data.url}"
-          class="d-flex justify-content-between ${data.cssClasses.link}"
+          className="d-flex justify-content-between ${data.cssClasses.link}"
           aria-label="${data.name} &amp; up">
           <div>
 			  ${data.stars
 					.map(
 						isFilled =>
-							isFilled ? `<i class="ri-star-fill text-warning mr-2"></i>` : `<i class="ri-star-line text-primary mr-2"></i>`
+							isFilled ? `<i className="ri-star-fill text-warning mr-2"></i>` : `<i className="ri-star-line text-primary mr-2"></i>`
 					).join('')}
-			  <span class="${data.cssClasses.label} text-primary">&amp; Up</span>
+			  <span className="${data.cssClasses.label} text-primary">&amp; Up</span>
 		</div>
-          <span class="badge iq-bg-primary">${data.count}</span>
+          <span className="badge iq-bg-primary">${data.count}</span>
         </a>
       `;
 			},
@@ -118,9 +118,9 @@ const renderToggleRefinement = (renderOptions, isFirstRender) => {
 	const { value, refine } = renderOptions;
 
 	document.querySelector('#toggle-refinement').innerHTML = `
-		<div class="custom-control custom-checkbox">
-			<input type="checkbox" class="custom-control-input brand-checkbox" id="free_Ship" value="" ${value.isRefined ? 'checked' : ''}>
-			<label class="custom-control-label" for="free_Ship">Free shipping</label>
+		<div className="custom-control custom-checkbox">
+			<input type="checkbox" className="custom-control-input brand-checkbox" id="free_Ship" value="" ${value.isRefined ? 'checked' : ''}>
+			<label className="custom-control-label" for="free_Ship">Free shipping</label>
 		</div>
   `;
 	const input = document.getElementById('toggle-refinement');
@@ -171,40 +171,40 @@ const renderHits = (renderOptions, isFirstRender) => {
     const { hits, widgetParams } = renderOptions;
 
     widgetParams.container.innerHTML = `
-<div class="ais-Hits iq-product">
-    <ul class="ais-Hits-list iq-product-list">
+<div className="ais-Hits iq-product">
+    <ul className="ais-Hits-list iq-product-list">
       ${hits
         .map(
             (item, index) =>
-                `<li key="${index}" class="ais-Hits-item iq-product-item iq-card">
-                  <div class="text-center">
+                `<li key="${index}" className="ais-Hits-item iq-product-item iq-card">
+                  <div className="text-center">
                   <a href="">
-                      <div class="h-56 d-flex align-items-center justify-content-center bg-white iq-border-radius-15">
+                      <div className="h-56 d-flex align-items-center justify-content-center bg-white iq-border-radius-15">
                         <img src="${item.image}" align="left" alt="${instantsearch.highlight({ attribute: 'image', hit: item })}" />
                       </div>
                   </a>
-                  <div class="card-body">
-                      <div class="text-justify">
+                  <div className="card-body">
+                      <div className="text-justify">
                         <a href="javascript:void(0)">${instantsearch.highlight({ attribute: 'name', hit: item }).substring(0,20)}</a>
-                        <p class="font-size-12 mb-0">${instantsearch.highlight({ attribute: 'description', hit: item }).substring(0,40)}</p>
-                        <div class="ratting">
-                            <ul class="ratting-item d-flex p-0 m-0">
-                                <li class="full"><i class="ri-star-fill"></i></li>
-                                <li class="full"><i class="ri-star-fill"></i></li>
-                                <li class="full"><i class="ri-star-fill"></i></li>
-                                <li class="full"><i class="ri-star-fill"></i></li>
-                                <li class="full"><i class="ri-star-line"></i></li>
+                        <p className="font-size-12 mb-0">${instantsearch.highlight({ attribute: 'description', hit: item }).substring(0,40)}</p>
+                        <div className="ratting">
+                            <ul className="ratting-item d-flex p-0 m-0">
+                                <li className="full"><i className="ri-star-fill"></i></li>
+                                <li className="full"><i className="ri-star-fill"></i></li>
+                                <li className="full"><i className="ri-star-fill"></i></li>
+                                <li className="full"><i className="ri-star-fill"></i></li>
+                                <li className="full"><i className="ri-star-line"></i></li>
                             </ul>
                         </div>
                       </div>
-                      <div class="iq-product-action my-2">
-                          <button type="button" class="btn btn-primary iq-waves-effect text-uppercase btn-sm addToCart" id="${item.objectID}">
-                            <i class="ri-shopping-cart-line mr-0"></i>
+                      <div className="iq-product-action my-2">
+                          <button type="button" className="btn btn-primary iq-waves-effect text-uppercase btn-sm addToCart" id="${item.objectID}">
+                            <i className="ri-shopping-cart-line mr-0"></i>
                           </button>
-                          <button type="button" class="btn btn-primary iq-waves-effect text-uppercase btn-sm addToWish" id="${item.objectID}">
-                            <i class="ri-heart-line mr-0"></i>
+                          <button type="button" className="btn btn-primary iq-waves-effect text-uppercase btn-sm addToWish" id="${item.objectID}">
+                            <i className="ri-heart-line mr-0"></i>
                           </button>
-                          <p class="font-size-16 font-weight-bold float-right">${item.price}</p>
+                          <p className="font-size-16 font-weight-bold float-right">${item.price}</p>
                       </div>
                   </div>
                 </div>

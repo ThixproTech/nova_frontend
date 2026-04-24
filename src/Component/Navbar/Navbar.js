@@ -393,7 +393,7 @@ const Navbar = (props) => {
           Notification 
         </DialogTitle> */}
         <div className="modal-header">
-          <h2 class="modal-title m-0">Notification</h2>
+          <h2 className="modal-title m-0">Notification</h2>
           <button
             className="btn btn-sm custom-action-button"
             onClick={handleClose}

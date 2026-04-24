@@ -15,7 +15,7 @@ const   PurchasePremiumPlan = (props) => {
         role="grid"
         aria-describedby="user-list-page-info"
       >
-        <thead class="text-nowrap">
+        <thead className="text-nowrap">
           <tr>
             <th className="text-center">No.</th>
             <th className="text-center">User Name</th>

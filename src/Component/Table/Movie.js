@@ -157,19 +157,19 @@ const Movie = (props) => {
         <div className="container-fluid pl-3">
           <div className="row">
             <div className="col-sm-12">
-              {/* <div class="iq-header-title mt-4 ml-2">
-                <h4 class="card-title">Movie</h4>
+              {/* <div className="iq-header-title mt-4 ml-2">
+                <h4 className="card-title">Movie</h4>
               </div> */}
               <div className="iq-card mb-5 mt-2">
                 <div className="iq-card-header d-flex justify-content-between">
-                  <div class="iq-header-title w-100">
-                    <h4 class="card-title">Movie</h4>
+                  <div className="iq-header-title w-100">
+                    <h4 className="card-title">Movie</h4>
                   </div>
                   <div className="d-flex gap-2 w-100 justify-content-end">
-                    <div class="form-group mb-0 d-flex mr-3">
+                    <div className="form-group mb-0 d-flex mr-3">
                       <input
                         type="search"
-                        class="form-control"
+                        className="form-control"
                         id="input-search"
                         placeholder="Search"
                         aria-controls="user-list-table"
@@ -178,13 +178,13 @@ const Movie = (props) => {
                     </div>
                     <button
                       type="button"
-                      class="btn dark-icon btn-primary"
+                      className="btn dark-icon btn-primary"
                       data-bs-toggle="modal"
                       id="create-btn"
                       data-bs-target="#showModal"
                       onClick={insertOpen}
                     >
-                      <i class="ri-add-line align-bottom me-1 fs-6"></i> Add
+                      <i className="ri-add-line align-bottom me-1 fs-6"></i> Add
                     </button>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ const Movie = (props) => {
                       role="grid"
                       aria-describedby="user-list-page-info"
                     >
-                      <thead class="text-nowrap">
+                      <thead className="text-nowrap">
                         <tr>
                           <th className="tableAlign">ID</th>
                           <th className="tableAlign">Image</th>
@@ -269,11 +269,11 @@ const Movie = (props) => {
 
                                   <td className="pr-3 tableAlign">
                                     {data?.type === "Premium" ? (
-                                      <div class="badge badge-pill badge-danger">
+                                      <div className="badge badge-pill badge-danger">
                                         {data?.type}
                                       </div>
                                     ) : (
-                                      <div class="badge badge-pill badge-info">
+                                      <div className="badge badge-pill badge-info">
                                         {data?.type}
                                       </div>
                                     )}
@@ -379,7 +379,7 @@ const Movie = (props) => {
                                         onClick={() => deleteOpen(data._id)}
                                       >
                                         <i
-                                          class="ri-delete-bin-6-line"
+                                          className="ri-delete-bin-6-line"
                                           style={{ fontSize: "19px" }}
                                         ></i>
                                       </button>

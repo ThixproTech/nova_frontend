@@ -172,10 +172,10 @@ const LiveTvDialogue = (props) => {
     <>
       <div id="content-page" className="content-page">
         <div className="container-fluid">
-          {/* <div class="iq-header-title row col-12 mb-3 pr-0">
+          {/* <div className="iq-header-title row col-12 mb-3 pr-0">
             <div className="col-6 ">
-              <div class="iq-header-title mt-4">
-                <h4 class="card-title mb-0">Add Live TV </h4>
+              <div className="iq-header-title mt-4">
+                <h4 className="card-title mb-0">Add Live TV </h4>
               </div>
             </div>
             <div className="col-6  d-flex justify-content-end px-0">
@@ -186,7 +186,7 @@ const LiveTvDialogue = (props) => {
               >
               
                 <i
-                  class="fa-solid fa-angles-left  p-2"
+                  className="fa-solid fa-angles-left  p-2"
                   style={{ fontSize: "19px", color: "#fdfdfd" }}
                 />
               </button>
@@ -194,9 +194,9 @@ const LiveTvDialogue = (props) => {
           </div> */}
           <div className="iq-card mb-5 mt-2">
             <div className="iq-card-header d-flex justify-content-between">
-              <div class="iq-header-title w-50">
-                <div class="iq-header-title">
-                  <h4 class="card-title mb-0">Add Live TV </h4>
+              <div className="iq-header-title w-50">
+                <div className="iq-header-title">
+                  <h4 className="card-title mb-0">Add Live TV </h4>
                 </div>
                 {/* <div className="col-6  d-flex justify-content-end px-0">
                   <button
@@ -206,7 +206,7 @@ const LiveTvDialogue = (props) => {
                   >
                    
                     <i
-                      class="fa-solid fa-angles-left  p-2"
+                      className="fa-solid fa-angles-left  p-2"
                       style={{ fontSize: "19px", color: "#fdfdfd" }}
                     />
                   </button>
@@ -214,13 +214,13 @@ const LiveTvDialogue = (props) => {
               </div>
               <div className="row w-50">
                 <div className="col-12 col-lg-6 p-0  d-flex justify-content-end">
-                  <form class=" mr-3">
-                    <div class="form-group mb-0">
+                  <form className=" mr-3">
+                    <div className="form-group mb-0">
                       <p className='' style={{margin : 0 , color : "#000" , fontWeight : 500 , fontSize : "small"}}>Search Here</p>
                       <input
                         id="input-search"
                         type="search"
-                        class="form-control"
+                        className="form-control"
                         placeholder="Search"
                         aria-controls="user-list-table"
                         onChange={handleSearch}
@@ -316,7 +316,7 @@ const LiveTvDialogue = (props) => {
                                   alt="profile"
                                 />
                               </td> */}
-                              {/* <td class="align-middle">
+                              {/* <td className="align-middle">
                             {" "}
                             <img
                               // className="shadow p-1 mb-2 bg-white rounded "
@@ -428,7 +428,7 @@ const LiveTvDialogue = (props) => {
         maxWidth="sm"
       >
         <div className="modal-header">
-          <h2 class="modal-title m-0">Select Channel Logo</h2>
+          <h2 className="modal-title m-0">Select Channel Logo</h2>
           <button
             className="btn btn-sm custom-action-button"
             onClick={handleClose}

@@ -86,8 +86,8 @@ const Shorts = () => {
         <div className="container-fluid">
           <div className="iq-card mb-5 mt-2">
             <div className="iq-card-header">
-              <div class="iq-header-title w-100">
-                <h4 class="card-title">Shorts</h4>
+              <div className="iq-header-title w-100">
+                <h4 className="card-title">Shorts</h4>
               </div>
             </div>
             <div className="iq-card-body">
@@ -98,7 +98,7 @@ const Shorts = () => {
                   role="grid"
                   aria-describedby="user-list-page-info"
                 >
-                  <thead class="text-nowrap">
+                  <thead className="text-nowrap">
                     <tr>
                       <th className="tableAlign">ID</th>
                       {/* <th className="tableAlign">Video</th> */}
@@ -213,7 +213,7 @@ const Shorts = () => {
                                 onClick={() => deleteOpen(data._id)}
                               >
                                 <i
-                                  class="ri-delete-bin-6-line"
+                                  className="ri-delete-bin-6-line"
                                   style={{ fontSize: '19px' }}
                                 ></i>
                               </button>
@@ -257,7 +257,7 @@ const Shorts = () => {
         maxWidth="sm"
       >
         <div className="modal-header">
-          <h2 class="modal-title m-0">Shorts Video</h2>
+          <h2 className="modal-title m-0">Shorts Video</h2>
           <button
             className="btn btn-sm custom-action-button"
             onClick={handleClose}

@@ -532,8 +532,8 @@ const Dashboard = (props) => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-12">
-              <div class="iq-header-title">
-                <h4 class="card-title m-0 mb-3">Dashboard</h4>
+              <div className="iq-header-title">
+                <h4 className="card-title m-0 mb-3">Dashboard</h4>
               </div>
 
               <div className="row d-flex dashCard mb-2 ml-1">
@@ -541,7 +541,7 @@ const Dashboard = (props) => {
                   <div className="iq-card-block iq-card-stretch iq-card-height dashboard-card iq-card w-100">
                     <div onClick={() => handleAnalytic("User")}>
                       <div className="d-flex justify-content-between align-items-center">
-                        <div class="pt-2">
+                        <div className="pt-2">
                           <div className="text-start dashCard-text-user">
                             <h4 className="text-capitalize my-0 dashCard-font-size">
                               Users
@@ -564,13 +564,13 @@ const Dashboard = (props) => {
                           </div>
                         </div>
                         <div
-                          class=" iq-card-icon dark-icon-light  d-flex justify-content-center align-items-center"
+                          className=" iq-card-icon dark-icon-light  d-flex justify-content-center align-items-center"
                           style={{
                             backgroundColor: "rgba(41, 131, 214, 1)",
                             borderRadius: "15px",
                           }}
                         >
-                          <img src={user} class="dashboard-card-icon" alt="" />
+                          <img src={user} className="dashboard-card-icon" alt="" />
                         </div>
                       </div>
                       <div className="iq-progress-bar">
@@ -594,7 +594,7 @@ const Dashboard = (props) => {
                   <div className="iq-card-block iq-card-stretch iq-card-height dashboard-card iq-card w-100">
                     <div onClick={() => handleAnalyticsChart("Movie")}>
                       <div className="d-flex justify-content-between align-items-center">
-                        <div class="pt-2">
+                        <div className="pt-2">
                           <div className="text-start dashCard-text-movie">
                             <h4 className="text-capitalize my-0 dashCard-font-size">
                               Movies
@@ -617,7 +617,7 @@ const Dashboard = (props) => {
                           </div>
                         </div>
                         <div
-                          class=" iq-card-icon dark-icon-light  d-flex justify-content-center align-items-center"
+                          className=" iq-card-icon dark-icon-light  d-flex justify-content-center align-items-center"
                           style={{
                             backgroundColor: "#C33B3B",
                             borderRadius: "15px",
@@ -647,7 +647,7 @@ const Dashboard = (props) => {
                   <div className="iq-card-block iq-card-stretch iq-card-height dashboard-card iq-card w-100">
                     <div onClick={() => handleAnalyticsChart("WebSeries")}>
                       <div className="d-flex justify-content-between align-items-center">
-                        <div class="pt-2">
+                        <div className="pt-2">
                           <div className="text-start dashCard-text-webSeries">
                             <h4 className="text-capitalize my-0 dashCard-font-size">
                               Web Series
@@ -670,7 +670,7 @@ const Dashboard = (props) => {
                           </div>
                         </div>
                         <div
-                          class="iq-card-icon dark-icon-light  d-flex justify-content-center align-items-center"
+                          className="iq-card-icon dark-icon-light  d-flex justify-content-center align-items-center"
                           style={{
                             backgroundColor: "#07A1B6",
                             borderRadius: "15px",
@@ -678,7 +678,7 @@ const Dashboard = (props) => {
                         >
                           <img
                             src={webSeriesIcon}
-                            class="dashboard-card-icon"
+                            className="dashboard-card-icon"
                             alt=""
                           />
                         </div>
@@ -703,7 +703,7 @@ const Dashboard = (props) => {
                   <div className="iq-card-block iq-card-stretch iq-card-height dashboard-card iq-card w-100">
                     <div onClick={() => handleAnalytic("Revenue")}>
                       <div className="d-flex justify-content-between align-items-center">
-                        <div class="pt-2">
+                        <div className="pt-2">
                           <div className="text-start dashCard-text-revenue">
                             <h4 className="text-capitalize my-0 dashCard-font-size">
                               Revenue
@@ -729,7 +729,7 @@ const Dashboard = (props) => {
                           </div>
                         </div>
                         <div
-                          class="iq-card-icon dark-icon-light  d-flex justify-content-center align-items-center"
+                          className="iq-card-icon dark-icon-light  d-flex justify-content-center align-items-center"
                           style={{
                             backgroundColor: "#0FB032",
                             borderRadius: "15px",
@@ -737,7 +737,7 @@ const Dashboard = (props) => {
                         >
                           <img
                             src={revenueIcon}
-                            class="dashboard-card-icon"
+                            className="dashboard-card-icon"
                             alt=""
                           />
                         </div>
@@ -764,20 +764,20 @@ const Dashboard = (props) => {
 
               <div className="row mb-2 ">
                 <div className="col-lg-6 ">
-                  <div class="col-md-12  pl-0 pr-0">
+                  <div className="col-md-12  pl-0 pr-0">
                     <h4 className="m-0 mb-3">{type}</h4>
                     {type === "User" ? (
                       dataUser.length > 0 ? (
                         <>
-                          <div class="iq-card iq-card-block iq-card-stretch card_border ">
+                          <div className="iq-card iq-card-block iq-card-stretch card_border ">
                             <div
-                              class="iq-card-header d-flex justify-content-end"
+                              className="iq-card-header d-flex justify-content-end"
                               style={{
                                 paddingRight: "27px",
                                 paddingTop: "23px",
                               }}
                             >
-                              <div class="iq-card-header-toolbar d-flex align-items-center">
+                              <div className="iq-card-header-toolbar d-flex align-items-center">
                                 <DateRangePicker
                                   initialSettings={{
                                     autoUpdateInput: false,
@@ -792,7 +792,7 @@ const Dashboard = (props) => {
                                   <input
                                     readOnly
                                     type="text"
-                                    class="form-control float-right"
+                                    className="form-control float-right"
                                     placeholder="Select Date"
                                     style={{
                                       fontWeight: 500,
@@ -801,7 +801,7 @@ const Dashboard = (props) => {
                                 </DateRangePicker>
                               </div>
                             </div>
-                            <div class="cartPadding">
+                            <div className="cartPadding">
                               {/* <Line
                                 data={chartData}
                                 options={{ responsive: true }}
@@ -822,12 +822,12 @@ const Dashboard = (props) => {
                           </div>
                         </>
                       ) : (
-                        <div class="iq-card iq-card-block iq-card-stretch card_border">
+                        <div className="iq-card iq-card-block iq-card-stretch card_border">
                           <div
-                            class="iq-card-header d-flex justify-content-end"
+                            className="iq-card-header d-flex justify-content-end"
                             style={{ paddingRight: "27px", paddingTop: "23px" }}
                           >
-                            <div class="iq-card-header-toolbar d-flex align-items-center">
+                            <div className="iq-card-header-toolbar d-flex align-items-center">
                               <DateRangePicker
                                 initialSettings={{
                                   autoUpdateInput: false,
@@ -842,7 +842,7 @@ const Dashboard = (props) => {
                                 <input
                                   readOnly
                                   type="text"
-                                  class="form-control float-right"
+                                  className="form-control float-right"
                                   placeholder="Select Date"
                                   style={{
                                     fontWeight: 500,
@@ -851,7 +851,7 @@ const Dashboard = (props) => {
                               </DateRangePicker>
                             </div>
                           </div>
-                          <div class="cartPadding">
+                          <div className="cartPadding">
                             {/* <Line
                               data={defaultChartData}
                               options={{ responsive: true }}
@@ -874,15 +874,15 @@ const Dashboard = (props) => {
                     ) : type === "Revenue" ? (
                       dataUser.length > 0 ? (
                         <>
-                          <div class="iq-card iq-card-block iq-card-stretch card_border">
+                          <div className="iq-card iq-card-block iq-card-stretch card_border">
                             <div
-                              class="iq-card-header d-flex justify-content-end"
+                              className="iq-card-header d-flex justify-content-end"
                               style={{
                                 paddingRight: "27px",
                                 paddingTop: "23px",
                               }}
                             >
-                              <div class="iq-card-header-toolbar d-flex align-items-center">
+                              <div className="iq-card-header-toolbar d-flex align-items-center">
                                 <DateRangePicker
                                   initialSettings={{
                                     autoUpdateInput: false,
@@ -897,7 +897,7 @@ const Dashboard = (props) => {
                                   <input
                                     readOnly
                                     type="text"
-                                    class="form-control float-right"
+                                    className="form-control float-right"
                                     placeholder="Select Date"
                                     style={{
                                       fontWeight: 500,
@@ -906,7 +906,7 @@ const Dashboard = (props) => {
                                 </DateRangePicker>
                               </div>
                             </div>
-                            <div class="cartPadding">
+                            <div className="cartPadding">
                               <div className="d-flex justify-content-end"></div>
 
                               <Chart
@@ -920,15 +920,15 @@ const Dashboard = (props) => {
                         </>
                       ) : (
                         <>
-                          <div class="iq-card iq-card-block iq-card-stretch card_border">
+                          <div className="iq-card iq-card-block iq-card-stretch card_border">
                             <div
-                              class="iq-card-header d-flex justify-content-end"
+                              className="iq-card-header d-flex justify-content-end"
                               style={{
                                 paddingRight: "27px",
                                 paddingTop: "23px",
                               }}
                             >
-                              <div class="iq-card-header-toolbar d-flex align-items-center">
+                              <div className="iq-card-header-toolbar d-flex align-items-center">
                                 <DateRangePicker
                                   initialSettings={{
                                     autoUpdateInput: false,
@@ -943,7 +943,7 @@ const Dashboard = (props) => {
                                   <input
                                     readOnly
                                     type="text"
-                                    class="form-control float-right"
+                                    className="form-control float-right"
                                     placeholder="Select Date"
                                     style={{
                                       fontWeight: 500,
@@ -952,7 +952,7 @@ const Dashboard = (props) => {
                                 </DateRangePicker>
                               </div>
                             </div>
-                            <div class="iq-card-body">
+                            <div className="iq-card-body">
                               <div className="d-flex justify-content-end"></div>
 
                               <Chart
@@ -967,12 +967,12 @@ const Dashboard = (props) => {
                       )
                     ) : (
                       <>
-                        <div class="iq-card iq-card-block iq-card-stretch card_border">
+                        <div className="iq-card iq-card-block iq-card-stretch card_border">
                           <div
-                            class="iq-card-header d-flex justify-content-end"
+                            className="iq-card-header d-flex justify-content-end"
                             style={{ paddingRight: "27px", paddingTop: "23px" }}
                           >
-                            <div class="iq-card-header-toolbar d-flex align-items-center">
+                            <div className="iq-card-header-toolbar d-flex align-items-center">
                               <DateRangePicker
                                 initialSettings={{
                                   autoUpdateInput: false,
@@ -987,7 +987,7 @@ const Dashboard = (props) => {
                                 <input
                                   readOnly
                                   type="text"
-                                  class="form-control float-right"
+                                  className="form-control float-right"
                                   placeholder="Select Date"
                                   style={{
                                     fontWeight: 500,
@@ -996,7 +996,7 @@ const Dashboard = (props) => {
                               </DateRangePicker>
                             </div>
                           </div>
-                          <div class="cartPadding">
+                          <div className="cartPadding">
                             <div className="d-flex justify-content-end"></div>
 
                             <Chart
@@ -1012,20 +1012,20 @@ const Dashboard = (props) => {
                   </div>
                 </div>
                 <div className="col-lg-6">
-                  <div class="col-md-12  pl-0 pr-0">
+                  <div className="col-md-12  pl-0 pr-0">
                     <h4 className="m-0 mb-3">{chartType}</h4>
                     {chartType === "Movie" ? (
                       dataMovie.length > 0 ? (
                         <>
-                          <div class="iq-card iq-card-block iq-card-stretch card_border mr-3">
+                          <div className="iq-card iq-card-block iq-card-stretch card_border mr-3">
                             <div
-                              class="iq-card-header d-flex justify-content-end"
+                              className="iq-card-header d-flex justify-content-end"
                               style={{
                                 paddingRight: "27px",
                                 paddingTop: "23px",
                               }}
                             >
-                              <div class="iq-card-header-toolbar d-flex align-items-center">
+                              <div className="iq-card-header-toolbar d-flex align-items-center">
                                 <DateRangePicker
                                   initialSettings={{
                                     autoUpdateInput: false,
@@ -1040,7 +1040,7 @@ const Dashboard = (props) => {
                                   <input
                                     readOnly
                                     type="text"
-                                    class="form-control float-right"
+                                    className="form-control float-right"
                                     placeholder="Select Date"
                                     style={{
                                       fontWeight: 500,
@@ -1049,7 +1049,7 @@ const Dashboard = (props) => {
                                 </DateRangePicker>
                               </div>
                             </div>
-                            <div class="cartPadding">
+                            <div className="cartPadding">
                               <div className="d-flex justify-content-end"></div>
 
                               <Chart
@@ -1063,15 +1063,15 @@ const Dashboard = (props) => {
                         </>
                       ) : (
                         <>
-                          <div class="iq-card iq-card-block iq-card-stretch card_border mx-1">
+                          <div className="iq-card iq-card-block iq-card-stretch card_border mx-1">
                             <div
-                              class="iq-card-header d-flex justify-content-end"
+                              className="iq-card-header d-flex justify-content-end"
                               style={{
                                 paddingRight: "27px",
                                 paddingTop: "23px",
                               }}
                             >
-                              <div class="iq-card-header-toolbar d-flex align-items-center">
+                              <div className="iq-card-header-toolbar d-flex align-items-center">
                                 <DateRangePicker
                                   initialSettings={{
                                     autoUpdateInput: false,
@@ -1086,7 +1086,7 @@ const Dashboard = (props) => {
                                   <input
                                     readOnly
                                     type="text"
-                                    class="form-control float-right"
+                                    className="form-control float-right"
                                     placeholder="Select Date"
                                     style={{
                                       fontWeight: 500,
@@ -1095,7 +1095,7 @@ const Dashboard = (props) => {
                                 </DateRangePicker>
                               </div>
                             </div>
-                            <div class="cartPadding">
+                            <div className="cartPadding">
                               <div className="d-flex justify-content-end"></div>
 
                               <Chart
@@ -1111,15 +1111,15 @@ const Dashboard = (props) => {
                     ) : chartType === "WebSeries" ? (
                       dataMovie.length > 0 ? (
                         <>
-                          <div class="iq-card iq-card-block iq-card-stretch card_border mr-3">
+                          <div className="iq-card iq-card-block iq-card-stretch card_border mr-3">
                             <div
-                              class="iq-card-header d-flex justify-content-end"
+                              className="iq-card-header d-flex justify-content-end"
                               style={{
                                 paddingRight: "27px",
                                 paddingTop: "23px",
                               }}
                             >
-                              <div class="iq-card-header-toolbar d-flex align-items-center">
+                              <div className="iq-card-header-toolbar d-flex align-items-center">
                                 <DateRangePicker
                                   initialSettings={{
                                     autoUpdateInput: false,
@@ -1134,7 +1134,7 @@ const Dashboard = (props) => {
                                   <input
                                     readOnly
                                     type="text"
-                                    class="form-control float-right"
+                                    className="form-control float-right"
                                     placeholder="Select Date"
                                     style={{
                                       fontWeight: 500,
@@ -1143,7 +1143,7 @@ const Dashboard = (props) => {
                                 </DateRangePicker>
                               </div>
                             </div>
-                            <div class="cartPadding">
+                            <div className="cartPadding">
                               <div className="d-flex justify-content-end"></div>
 
                               <div id="chart">
@@ -1159,15 +1159,15 @@ const Dashboard = (props) => {
                         </>
                       ) : (
                         <>
-                          <div class="iq-card iq-card-block iq-card-stretch card_border mx-1">
+                          <div className="iq-card iq-card-block iq-card-stretch card_border mx-1">
                             <div
-                              class="iq-card-header d-flex justify-content-end"
+                              className="iq-card-header d-flex justify-content-end"
                               style={{
                                 paddingRight: "27px",
                                 paddingTop: "23px",
                               }}
                             >
-                              <div class="iq-card-header-toolbar d-flex align-items-center">
+                              <div className="iq-card-header-toolbar d-flex align-items-center">
                                 <DateRangePicker
                                   initialSettings={{
                                     autoUpdateInput: false,
@@ -1182,7 +1182,7 @@ const Dashboard = (props) => {
                                   <input
                                     readOnly
                                     type="text"
-                                    class="form-control float-right"
+                                    className="form-control float-right"
                                     placeholder="Select Date"
                                     style={{
                                       fontWeight: 500,
@@ -1206,12 +1206,12 @@ const Dashboard = (props) => {
                       )
                     ) : (
                       <>
-                        <div class="iq-card iq-card-block iq-card-stretch card_border mx-1">
+                        <div className="iq-card iq-card-block iq-card-stretch card_border mx-1">
                           <div
-                            class="iq-card-header d-flex justify-content-end"
+                            className="iq-card-header d-flex justify-content-end"
                             style={{ paddingRight: "27px", paddingTop: "23px" }}
                           >
-                            <div class="iq-card-header-toolbar d-flex align-items-center">
+                            <div className="iq-card-header-toolbar d-flex align-items-center">
                               <DateRangePicker
                                 initialSettings={{
                                   autoUpdateInput: false,
@@ -1226,7 +1226,7 @@ const Dashboard = (props) => {
                                 <input
                                   type="text"
                                   readonly
-                                  class="form-control float-right"
+                                  className="form-control float-right"
                                   placeholder="Select Date"
                                   style={{
                                     fontWeight: 500,
@@ -1258,9 +1258,9 @@ const Dashboard = (props) => {
                       <div className="iq-card-header">
                         <h4 className="card-title">Most viewed movie</h4>
                       </div>
-                      <div class="iq-card-body p-0">
-                        <div class="table-responsive">
-                          <table class="table mb-0 table-borderless">
+                      <div className="iq-card-body p-0">
+                        <div className="table-responsive">
+                          <table className="table mb-0 table-borderless">
                             <thead className="dashboard-table border-bottom">
                               <tr className="text-center">
                                 <th>ID</th>
@@ -1290,11 +1290,11 @@ const Dashboard = (props) => {
                                         </td>
                                         <td className="pr-3 tableAlign text-center">
                                           {data?.type === "Premium" ? (
-                                            <div class="badge badge-pill badge-danger">
+                                            <div className="badge badge-pill badge-danger">
                                               {data?.type}
                                             </div>
                                           ) : (
-                                            <div class="badge badge-pill badge-info">
+                                            <div className="badge badge-pill badge-info">
                                               {data?.type}
                                             </div>
                                           )}
@@ -1331,13 +1331,13 @@ const Dashboard = (props) => {
                 </div>
                 <div className="col-lg-6 ">
                   <div className="">
-                    <div class="iq-card iq-card-block iq-card-stretch  iq-card-height overflow-hidden mt-3">
+                    <div className="iq-card iq-card-block iq-card-stretch  iq-card-height overflow-hidden mt-3">
                       <div className="iq-card-header">
                         <h4 className="card-title">Most Viewed Web Series</h4>
                       </div>
-                      <div class="iq-card-body p-0">
-                        <div class="table-responsive">
-                          <table class="table mb-0 table-borderless ">
+                      <div className="iq-card-body p-0">
+                        <div className="table-responsive">
+                          <table className="table mb-0 table-borderless ">
                             <thead className="dashboard-table border-bottom">
                               <tr className="text-center">
                                 <th>ID</th>
@@ -1364,11 +1364,11 @@ const Dashboard = (props) => {
                                         </td>
                                         <td className="pr-3 tableAlign text-center">
                                           {data?.type === "Premium" ? (
-                                            <div class="badge badge-pill badge-danger">
+                                            <div className="badge badge-pill badge-danger">
                                               {data?.type}
                                             </div>
                                           ) : (
-                                            <div class="badge badge-pill badge-info">
+                                            <div className="badge badge-pill badge-info">
                                               {data?.type}
                                             </div>
                                           )}

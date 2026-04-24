@@ -21,10 +21,10 @@ const Pagination = (props) => {
           <div className="d-flex align-items-center">
             <span>Rows Per Page</span>
             <select
-              class=" mx-2 mb-2 mb-md-0 mb-lg-0 dropdown  "
+              className=" mx-2 mb-2 mb-md-0 mb-lg-0 dropdown  "
               style={{
                 // borderColor: "#112935",
-                // background: "#112935",
+                // background: "#112935",  
                 color: "black",
                 borderRadius: "5px",
               }}
@@ -68,8 +68,8 @@ const Pagination = (props) => {
               totalItemsCount={props.userTotal}
               pageRangeDisplayed={2}
               onChange={(page) => handlePage(page)}
-              itemClass="page-item"
-              linkClass="align-middle page-link text-center"
+              itemclassName="page-item"
+              linkclassName="align-middle page-link text-center"
               itemClassFirst="paginationClass"
               itemClassNext="paginationClass"
               itemClassLast="paginationClass"

@@ -78,7 +78,7 @@ const MovieEpisode = () => {
                   role="grid"
                   aria-describedby="user-list-page-info"
                 >
-                  <thead class="text-nowrap">
+                  <thead className="text-nowrap">
                     <tr>
                       <th className="tableAlign">ID</th>
                       <th className="tableAlign">Video</th>
@@ -164,7 +164,7 @@ const MovieEpisode = () => {
                                 onClick={() => deleteOpen(data._id)}
                               >
                                 <i
-                                  class="ri-delete-bin-6-line"
+                                  className="ri-delete-bin-6-line"
                                   style={{ fontSize: '19px' }}
                                 ></i>
                               </button>

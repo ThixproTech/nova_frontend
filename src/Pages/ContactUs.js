@@ -101,26 +101,26 @@ const ContactUs = (props) => {
 
 
         <div
-          class="iq-card "
+          className="iq-card "
         >
           <div className="iq-card-header d-flex justify-content-between">
-            <div class="iq-header-title">
-              <h4 class="card-title">Contact Us</h4>
+            <div className="iq-header-title">
+              <h4 className="card-title">Contact Us</h4>
             </div>
             <div className="d-flex justify-content-end">
               <button
                 type="button"
-                class="btn dark-icon btn-primary"
+                className="btn dark-icon btn-primary"
                 data-bs-toggle="modal"
                 id="create-btn"
                 data-bs-target="#showModal"
                 onClick={handleOpen}
               >
-                <i class="ri-add-line align-bottom me-1 fs-6"></i> Add
+                <i className="ri-add-line align-bottom me-1 fs-6"></i> Add
               </button>
             </div>
           </div>
-          <div class="iq-card-body">
+          <div className="iq-card-body">
             <div className="help-center-scroll">
               {data.length > 0
                 ? data.map((data, index) => {
@@ -160,15 +160,15 @@ const ContactUs = (props) => {
                                       {data?.name}
                                     </a>
                                   </div>
-                                  <div class="iq-email-content">
+                                  <div className="iq-email-content">
                                     <a
                                       href="javascript: void(0);"
-                                      class="iq-email-subject"
+                                      className="iq-email-subject"
                                     >
                                       {data?.link}
                                     </a>
                                   </div>
-                                  <ul class="iq-social-media">
+                                  <ul className="iq-social-media">
                                     <li>
                                       <button
                                         type="button"
@@ -226,10 +226,10 @@ const ContactUs = (props) => {
                 //                     />
                 //                   </div>
 
-                //                   <div class="iq-email-content">
+                //                   <div className="iq-email-content">
                 //                     <a
                 //                       href="javascript: void(0);"
-                //                       class="iq-email-subject"
+                //                       className="iq-email-subject"
                 //                     >
                 //                       <Skeleton
                 //                         width="200px"
@@ -240,7 +240,7 @@ const ContactUs = (props) => {
                 //                     </a>
                 //                   </div>
 
-                //                   {/* <ul class="iq-social-media">
+                //                   {/* <ul className="iq-social-media">
                 //                           <li>
                 //                             <button
                 //                               type="button"

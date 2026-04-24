@@ -137,13 +137,13 @@ const User = (props) => {
             <div className="col-sm-12">
               <div className="iq-card mb-5 mt-2">
                 <div className="iq-card-header d-flex justify-content-between">
-                  <div class="iq-header-title">
-                    <h4 class="card-title">User List</h4>
+                  <div className="iq-header-title">
+                    <h4 className="card-title">User List</h4>
                   </div>
                   <div className="text-center sm ">
-                    <form class="position-relative">
-                      <div class="form-group mb-0 d-flex position-relative">
-                        {/* <i class="fa fa-search text-white" aria-hidden="true"></i> */}
+                    <form className="position-relative">
+                      <div className="form-group mb-0 d-flex position-relative">
+                        {/* <i className="fa fa-search text-white" aria-hidden="true"></i> */}
                         <img
                           alt=""
                           src={Search}
@@ -158,7 +158,7 @@ const User = (props) => {
                         />
                         <input
                           type="search"
-                          class="form-control"
+                          className="form-control"
                           id="input-search"
                           placeholder="Search"
                           aria-controls="user-list-table"
@@ -176,7 +176,7 @@ const User = (props) => {
                       role="grid"
                       aria-describedby="user-list-page-info"
                     >
-                      <thead class="text-nowrap">
+                      <thead className="text-nowrap">
                         <tr>
                           <th className="text-center">Profile</th>
                           <th

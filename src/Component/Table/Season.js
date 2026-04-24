@@ -162,10 +162,10 @@ const Season = (props) => {
               <h4 className="card-title my-0">Seasons </h4>
 
               <div className="d-flex">
-                <div class="form-group mb-0 d-flex mr-3">
+                <div className="form-group mb-0 d-flex mr-3">
                   <input
                     type="search"
-                    class="form-control"
+                    className="form-control"
                     id="input-search"
                     placeholder="Search"
                     aria-controls="user-list-table"
@@ -175,13 +175,13 @@ const Season = (props) => {
 
                 <button
                   type="button"
-                  class="btn dark-icon btn-primary"
+                  className="btn dark-icon btn-primary"
                   data-bs-toggle="modal"
                   id="create-btn"
                   data-bs-target="#showModal"
                   onClick={handleOpen}
                 >
-                  <i class="ri-add-line align-bottom me-1 fs-6"></i> Add
+                  <i className="ri-add-line align-bottom me-1 fs-6"></i> Add
                 </button>
 
               </div>
@@ -218,7 +218,7 @@ const Season = (props) => {
                           return (
                             <>
                               <tr>
-                                <td class="align-middle tableAlign">
+                                <td className="align-middle tableAlign">
                                   {(page - 1) * rowsPerPage + index + 1}
                                 </td>
                                 <td
@@ -245,28 +245,28 @@ const Season = (props) => {
                                     alt=""
                                   />
                                 </td>
-                                <td class="align-middle tableAlign">
+                                <td className="align-middle tableAlign">
                                   {data?.name}
                                 </td>
-                                <td class="align-middle tableAlign">
+                                <td className="align-middle tableAlign">
                                   {data?.seasonNumber}
                                 </td>
-                                <td class="align-middle tableAlign">
+                                <td className="align-middle tableAlign">
                                   {data?.episodeCount}
                                 </td>
-                                <td class="align-middle tableAlign">
+                                <td className="align-middle tableAlign">
                                   {data?.movie?.title}
                                 </td>
-                                <td class="align-middle tableAlign">
+                                <td className="align-middle tableAlign">
                                   {data?.releaseDate}
                                 </td>
-                                <td class="align-middle tableAlign">
+                                <td className="align-middle tableAlign">
                                   {dayjs(data?.createdAt).format(
                                     'DD MMM YYYY'
                                   )}
                                 </td>
 
-                                <td class="align-middle tableAlign">
+                                <td className="align-middle tableAlign">
                                   <div className='d-flex justify-content-center '>
                                     <button
                                       type="button"
@@ -287,7 +287,7 @@ const Season = (props) => {
 
                                   </div>
                                 </td>
-                                {/* <td class="align-middle tableAlign">
+                                {/* <td className="align-middle tableAlign">
                                         <button
                                           type="button"
                                           className="btn iq-bg-primary btn-sm"
@@ -296,7 +296,7 @@ const Season = (props) => {
                                           }
                                         >
                                           <i
-                                            class="ri-delete-bin-6-line"
+                                            className="ri-delete-bin-6-line"
                                             style={{ fontSize: '19px' }}
                                           ></i>
                                         </button>

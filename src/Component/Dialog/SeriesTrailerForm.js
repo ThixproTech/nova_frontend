@@ -339,20 +339,20 @@ const SeriesTrailerForm = (props) => {
 
   return (
     <>
-      <div id="content-page" class="content-page">
-        <div class="container-fluid">
-          {/* <div class="row">
-            <div class="row">
-              <div class="col-12">
-                <div class="page-title-box d-sm-flex align-items-center justify-content-between mt-2 mb-3">
-                  <h4 class="ml-3">Trailer </h4>
+      <div id="content-page" className="content-page">
+        <div className="container-fluid">
+          {/* <div className="row">
+            <div className="row">
+              <div className="col-12">
+                <div className="page-title-box d-sm-flex align-items-center justify-content-between mt-2 mb-3">
+                  <h4 className="ml-3">Trailer </h4>
                 </div>
               </div>
             </div> */}
 
           <div className="iq-card my-4">
             <div className="iq-card-header">
-              <h4 class="card-title">Trailer</h4>
+              <h4 className="card-title">Trailer</h4>
             </div>
 
 
@@ -490,7 +490,7 @@ const SeriesTrailerForm = (props) => {
                         <select
                           id="contentType"
                           name="contentType"
-                          class="form-select form-control-line"
+                          className="form-select form-control-line"
                           required
                           value={videoType}
                           onChange={(e) => {
@@ -601,7 +601,7 @@ const SeriesTrailerForm = (props) => {
                               type="text"
                               // id="link"
                               placeholder="Link"
-                              class="form-control "
+                              className="form-control "
                               value={videoUrl}
                               onChange={(e) => {
                                 setVideoUrl(e.target.value);
@@ -651,7 +651,7 @@ const SeriesTrailerForm = (props) => {
                                 />
 
                                 <div
-                                  class="img-container"
+                                  className="img-container"
                                   style={{
                                     display: "inline",
                                     position: "relative",

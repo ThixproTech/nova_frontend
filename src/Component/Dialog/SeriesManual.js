@@ -728,7 +728,7 @@ const SeriesManual = (props) => {
             </div>
           )}
           <div className="iq-card mb-5">
-            <div class="iq-card-header">
+            <div className="iq-card-header">
               <h4>Add Series</h4>
             </div>
             <div className="iq-card-body">
@@ -743,7 +743,7 @@ const SeriesManual = (props) => {
                         type="text"
                         placeholder="Title"
                         className="form-control form-control-line"
-                        Required
+                        required
                         value={title}
                         onChange={(e) => {
                           setTitle(
@@ -769,7 +769,7 @@ const SeriesManual = (props) => {
                       type="text"
                       placeholder="Title"
                       className="form-control form-control-line"
-                      Required
+                      required
                       value={title}
                       onChange={(e) => {
                         setTitle(
@@ -813,7 +813,7 @@ const SeriesManual = (props) => {
                       type="date"
                       placeholder="YYYY"
                       className="form-control form-control-line"
-                      Required
+                      required
                       min="1950"
                       value={year}
                       onChange={(e) => {
@@ -837,7 +837,7 @@ const SeriesManual = (props) => {
                       type="date"
                       placeholder="YYYY-MM-DD"
                       className="form-control form-control-line"
-                      Required
+                      required
                       min="1950"
                       //   value={movieDetailsTmdb?.year}
                       onChange={(e) => {
@@ -897,8 +897,8 @@ const SeriesManual = (props) => {
                     }}
                   >
                     <option>Select Region</option>
-                    {countries.map((data) => {
-                      return <option value={data._id}>{data.name}</option>;
+                    {countries.map((data, index) => {
+                      return <option value={data._id} key={index}>{data.name}</option>;
                     })}
                   </select>
                   {error.country && (
@@ -1008,8 +1008,8 @@ const SeriesManual = (props) => {
                         },
                         searchBox: {
                           border: "none",
-                          "border-bottom": "1px solid blue",
-                          "border-radius": "0px",
+                          borderBottom: "1px solid blue",
+                          borderRadius: "0px",
                         },
                       }}
                     />
@@ -1031,8 +1031,8 @@ const SeriesManual = (props) => {
                         },
                         searchBox: {
                           border: "none",
-                          "border-bottom": "1px solid blue",
-                          "border-radius": "0px",
+                          borderBottom: "1px solid blue",
+                          borderRadius: "0px",
                         },
                       }}
                     />
@@ -1053,7 +1053,7 @@ const SeriesManual = (props) => {
                   )}
                 </div>
 
-                <div class="col-12 form-group">
+                <div className="col-12 form-group">
                   <label
                     htmlFor="description"
                     className="styleForTitle mt-3 movieForm"
@@ -1177,10 +1177,10 @@ const SeriesManual = (props) => {
                             id="customFile"
                             name="thumbnailImageShowImage"
                             accept="image/png, image/jpeg ,image/jpg"
-                            Required=""
+                            required
                             // onChange={thumbnailLoad}
                             style={{ display: "none" }}
-                            enctype="multipart/form-data"
+                            encType="multipart/form-data"
                             // onChange={selectThumbnailFile}
                             onChange={handleFileChange}
                           />
@@ -1239,7 +1239,7 @@ const SeriesManual = (props) => {
                               </div>
                             </>
                           ) : (
-                            <div class="select_image">
+                            <div className="select_image">
                               <i
                                 className="fas fa-plus"
                                 style={{
@@ -1251,7 +1251,7 @@ const SeriesManual = (props) => {
                               />
 
                               <input
-                                autocomplete="off"
+                                autoComplete="off"
                                 style={{
                                   position: "absolute",
                                   top: 112,
@@ -1263,9 +1263,9 @@ const SeriesManual = (props) => {
                                 id="customFile"
                                 name="thumbnailImageShowImage"
                                 accept="image/png, image/jpeg ,image/jpg"
-                                Required=""
+                                required
                                 // onChange={thumbnailLoad}
-                                enctype="multipart/form-data"
+                                encType="multipart/form-data"
                                 // onChange={selectThumbnailFile}
                                 onChange={handleFileChange}
                               />
@@ -1306,7 +1306,7 @@ const SeriesManual = (props) => {
                   </div>
                 </div>
 
-                <div class="pl-3 form-group">
+                <div className="pl-3 form-group">
                   <label className="mt-3 movieForm">Image</label>
 
                   <div className="d-flex justify-content-center align-item-center">
@@ -1319,10 +1319,10 @@ const SeriesManual = (props) => {
                           id="customFile"
                           name="seriesImageShowURL"
                           accept="image/png, image/jpeg ,image/jpg"
-                          Required=""
+                          required
                           // onChange={imageLoad}
                           style={{ display: "none" }}
-                          enctype="multipart/form-data"
+                          encType="multipart/form-data"
                           // onChange={selectImageFile}
                           onChange={handleFileChange}
                         />
@@ -1380,7 +1380,7 @@ const SeriesManual = (props) => {
                             </div>
                           </>
                         ) : (
-                          <div class="select_image">
+                          <div className="select_image">
                             <i
                               className="fas fa-plus"
                               style={{
@@ -1392,7 +1392,7 @@ const SeriesManual = (props) => {
                             />
 
                             <input
-                              autocomplete="off"
+                              autoComplete="off"
                               tabIndex="-1"
                               style={{
                                 position: "absolute",
@@ -1405,7 +1405,7 @@ const SeriesManual = (props) => {
                               id="customFile"
                               name="seriesImageShowURL"
                               accept="image/png, image/jpeg ,image/jpg"
-                              Required=""
+                              required
                               // onChange={imageLoad}
                               // onChange={selectImageFile}
                               onChange={handleFileChange}
@@ -1457,7 +1457,7 @@ const SeriesManual = (props) => {
                       type="text"
                       placeholder="Trailer Name"
                       className="form-select form-control-line"
-                      Required
+                      required
                       value={trailerType}
                       onChange={(e) => {
                         setTrailerType(e.target.value);
@@ -1503,7 +1503,7 @@ const SeriesManual = (props) => {
                       type="text"
                       placeholder="Trailer Name"
                       className="form-control form-control-line"
-                      Required
+                      required
                       value={trailerName}
                       onChange={(e) => {
                         setTrailerName(
@@ -1546,7 +1546,7 @@ const SeriesManual = (props) => {
                       type="text"
                       placeholder="Trailer Name"
                       className="form-select form-control-line"
-                      Required
+                      required
                       value={trailerVideoType}
                       onChange={(e) => {
                         setTrailerVideoType(e.target.value);
@@ -1596,7 +1596,7 @@ const SeriesManual = (props) => {
                             type="text"
                             // id="link"
                             placeholder="Link"
-                            class="form-control"
+                            className="form-control"
                             value={trailerVideoUrl}
                             onChange={(e) => {
                               setTrailerVideoUrl(e.target.value);
@@ -1636,7 +1636,7 @@ const SeriesManual = (props) => {
                             id="customFile"
                             className="form-control"
                             accept="video/*"
-                            required=""
+                            required
                             onChange={trailerVideoLoad}
                           />
                           <p className="extention-show">
@@ -1662,7 +1662,7 @@ const SeriesManual = (props) => {
                                 }}
                               />
                               <div
-                                class="img-container"
+                                className="img-container"
                                 style={{
                                   display: "inline",
                                   position: "relative",

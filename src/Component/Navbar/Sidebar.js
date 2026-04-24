@@ -77,7 +77,7 @@ const Sidebar = () => {
       <div className="iq-sidebar">
         <div className="iq-sidebar-logo d-flex justify-content-between">
           <NavLink to="/admin/dashboard">
-            <div clssName="iq-light-logo">
+            <div className="iq-light-logo">
               {/* <div className="iq-light-logo">
                 <img src="images/logo.gif" className="img-fluid" alt />
               </div> */}

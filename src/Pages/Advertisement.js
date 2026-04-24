@@ -98,10 +98,10 @@ const Advertisement = (props) => {
         <div className="container-fluid">
           <div className="iq-card mt-2 mb-5">
             <div className="iq-card-header d-flex justify-content-between">
-              <div class="iq-header-title">
-                <h4 class="card-title">Advertisement Setting</h4>
+              <div className="iq-header-title">
+                <h4 className="card-title">Advertisement Setting</h4>
               </div>
-              <div class="">
+              <div className="">
                 <div className="align-items-center d-flex justify-content-end">
                   <h6>Google Ads</h6>
                   <label className="switch mb-0">
@@ -124,8 +124,8 @@ const Advertisement = (props) => {
                   <div className="col-lg-6 py-3">
                     <div className="form-group iq-card mb-0">
                       <div className="iq-card-header d-flex justify-content-between">
-                        <div class="iq-header-title">
-                          <h4 class="card-title">Android</h4>
+                        <div className="iq-header-title">
+                          <h4 className="card-title">Android</h4>
                         </div>
                       </div>
                       <div className="iq-card-body p-3">
@@ -169,8 +169,8 @@ const Advertisement = (props) => {
                   <div className="col-lg-6 py-3">
                     <div className="form-group iq-card mb-0">
                       <div className="iq-card-header d-flex justify-content-between">
-                        <div class="iq-header-title">
-                          <h4 class="card-title">IOS</h4>
+                        <div className="iq-header-title">
+                          <h4 className="card-title">IOS</h4>
                         </div>
                       </div>
                       <div className="iq-card-body p-3">

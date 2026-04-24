@@ -407,7 +407,7 @@ const MovieDialog = (props) => {
     formData.append("folderStructure", folderStructureMovieVideo);
     formData.append("keyName", event.target.files[0]?.name);
     formData.append("content", event.target.files[0]);
-    const uploadUrl = baseURL + `file/upload-file`;
+    const uploadUrl = baseURL + `/file/upload-file`;
 
     const xhr = new XMLHttpRequest();
     xhr.open("POST", uploadUrl, true);
@@ -930,13 +930,13 @@ const MovieDialog = (props) => {
     if (videoType == 6 && !embedUrl) error.embedUrl = "Embed URL is required!";
     if (videoType == 7 && !video && !dialogData?.link)
       error.video = "Video file is required!";
-
-    if (Object.keys(error).length > 0) {
-      setError(error);
-      dispatch({ type: CLOSE_LOADER }); // 👈 Close on validation error
-      return;
-    }
-
+    console.log("Hello World!!!")
+    
+    // if (Object.keys(error).length > 0) {
+    //   setError(error);
+    //   dispatch({ type: CLOSE_LOADER }); // 👈 Close on validation error
+    //   return;
+    // }
     try {
       dispatch({ type: OPEN_LOADER });
 
@@ -955,9 +955,8 @@ const MovieDialog = (props) => {
           formData.append("folderStructure", folderStructureMovieVideo);
           formData.append("keyName", video.name);
           formData.append("content", video);
-
           try {
-            const uploadRes = await fetch(baseURL + "file/upload-file", {
+            const uploadRes = await fetch(baseURL + "/file/upload-file", {
               method: "POST",
               headers: { key: secretKey },
               body: formData,
@@ -967,7 +966,7 @@ const MovieDialog = (props) => {
               const resData = await uploadRes.json();
               const fileName = resData?.url?.split("/").pop();
 
-              const convertRes = await fetch(baseURL + "file/get-signed-url", {
+              const convertRes = await fetch(baseURL + "/file/get-signed-url", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -1158,28 +1157,28 @@ const MovieDialog = (props) => {
               </div>
             </>
 
-            /* <div class="col-sm-12 col-lg-12 mb-4 pr-0 pl-0">
-              <div class="iq-card">
-                <div class="iq-card-header d-flex justify-content-between">
-                  <div class="iq-header-title d-flex align-items-center">
+            /* <div className="col-sm-12 col-lg-12 mb-4 pr-0 pl-0">
+              <div className="iq-card">
+                <div className="iq-card-header d-flex justify-content-between">
+                  <div className="iq-header-title d-flex align-items-center">
                     <MovieFilterIcon
                       className="mr-2"
                       style={{ fontSize: "30px", color: "#ffff" }}
                     />
 
-                    <h4 class="card-title my-0">Insert Movie </h4>
+                    <h4 className="card-title my-0">Insert Movie </h4>
                   </div>
                 </div>
-                <div class="iq-card-body">
+                <div className="iq-card-body">
                   <ul
-                    class="nav nav-pills mb-2 ml-0"
+                    className="nav nav-pills mb-2 ml-0"
                     id="pills-tab"
                     style={{ marginLeft: "21px" }}
                     role="tablist"
                   >
-                    <li class="nav-item navCustom">
+                    <li className="nav-item navCustom">
                       <NavLink
-                        class="nav-link active"
+                        className="nav-link active"
                         id="pills-home-tab"
                         data-toggle="pill"
                         href="#pills-home"
@@ -1195,9 +1194,9 @@ const MovieDialog = (props) => {
                         IMDB
                       </NavLink>
                     </li>
-                    <li class="nav-item navCustom">
+                    <li className="nav-item navCustom">
                       <NavLink
-                        class="nav-link"
+                        className="nav-link"
                         id="pills-profile-tab"
                         data-toggle="pill"
                         href="#pills-profile"
@@ -1214,21 +1213,21 @@ const MovieDialog = (props) => {
                       </NavLink>
                     </li>
                   </ul>
-                  <div class="tab-content" id="pills-tabContent-2">
+                  <div className="tab-content" id="pills-tabContent-2">
                     <div
-                      class="tab-pane fade show active"
+                      className="tab-pane fade show active"
                       id="pills-home"
                       role="tabpanel"
                       aria-labelledby="pills-home-tab"
                     ></div>
                     <div
-                      class="tab-pane fade"
+                      className="tab-pane fade"
                       id="pills-profile"
                       role="tabpanel"
                       aria-labelledby="pills-profile-tab"
                     ></div>
                     <div
-                      class="tab-pane fade"
+                      className="tab-pane fade"
                       id="pills-contact"
                       role="tabpanel"
                       aria-labelledby="pills-contact-tab"
@@ -1242,14 +1241,14 @@ const MovieDialog = (props) => {
           {!dialogData && (
             <>
               <div className="iq-card mb-3">
-                <div class="iq-card-header">
+                <div className="iq-card-header">
                   <div className="card-title">Import Contents From IMDB</div>
                 </div>
 
-                <div class="iq-card-body d-flex  mt-3">
-                  <div class="col-lg-5">
+                <div className="iq-card-body d-flex  mt-3">
+                  <div className="col-lg-5">
                     <input
-                      class="form-control"
+                      className="form-control"
                       id="imdb_id"
                       type="text"
                       placeholder="Enter IMDB ID. Ex:tt0120338"
@@ -1262,9 +1261,9 @@ const MovieDialog = (props) => {
                   <p className="align-items-center col-lg-1 d-flex fw-bold justify-content-center mb-0 text-center">
                     OR
                   </p>
-                  <div class="col-lg-5 ">
+                  <div className="col-lg-5 ">
                     {/* <input
-                      class="form-control"
+                      className="form-control"
                       id="imdb_id"
                       type="text"
                       placeholder="Enter Movie Title"
@@ -1300,13 +1299,13 @@ const MovieDialog = (props) => {
                       }}
                     />
                   </div>
-                  <div className="col-lg-1">
+                  <div className="col-lg-1 pl-0">
                     <div>
                       <button
                         type="submit"
                         onClick={tmdbMovieDetail}
                         id="import_btn"
-                        className="btn btn-primary btn-sm px-3 py-2 ml-3"
+                        className="btn btn-primary btn-sm px-3 py-2"
                       >
                         {" "}
                         Fetch{" "}
@@ -1314,8 +1313,8 @@ const MovieDialog = (props) => {
                     </div>
                   </div>
                 </div>
-                <div class="row justify-content-center">
-                  <div class="col-lg-5">
+                <div className="row justify-content-center">
+                  <div className="col-lg-5">
                     <h6>
                       <p>
                         {" "}
@@ -1351,7 +1350,7 @@ const MovieDialog = (props) => {
                     <>
                       <div className=" p-3">
                         <div className="row p-0">
-                          <div class="col-6 form-group">
+                          <div className="col-6 form-group">
                             <label className="float-left styleForTitle movieForm">
                               Title
                             </label>
@@ -1360,7 +1359,7 @@ const MovieDialog = (props) => {
                               type="text"
                               placeholder="Title"
                               className="form-control form-control-line"
-                              Required
+                              required
                               value={movieDetailsTmdb?.title}
                               // value={title}
                               onChange={(e) => {
@@ -1371,7 +1370,7 @@ const MovieDialog = (props) => {
                               }}
                             />
                           </div>
-                          <div class="col-6 form-group">
+                          <div className="col-6 form-group">
                             <label className="float-left styleForTitle movieForm">
                               Release Year
                             </label>
@@ -1380,7 +1379,7 @@ const MovieDialog = (props) => {
                               type="date"
                               placeholder="YYYY-MM-DD"
                               className="form-control form-control-line"
-                              Required
+                              required
                               min="1950"
                               value={movieDetailsTmdb?.year}
                               onChange={(e) => {
@@ -1388,7 +1387,7 @@ const MovieDialog = (props) => {
                               }}
                             />
                           </div>
-                          <div class="col-6 form-group">
+                          <div className="col-6 form-group">
                             <label className="float-left">
                               Runtime (minutes)
                             </label>
@@ -1423,7 +1422,7 @@ const MovieDialog = (props) => {
                               </div>
                             )}
                           </div>
-                          <div class="col-6 form-group">
+                          <div className="col-6 form-group">
                             <label className="float-left movieForm">
                               Free/Premium
                             </label>
@@ -1468,13 +1467,13 @@ const MovieDialog = (props) => {
                               </div>
                             )}
                           </div>
-                          <div class="col-md-6 form-group">
+                          <div className="col-md-6 form-group">
                             <label className="movieForm">Video Type</label>
                             <div>
                               <select
                                 id="contentType"
                                 name="contentType"
-                                class="form-select form-control-line"
+                                className="form-select form-control-line"
                                 value={videoType}
                                 onChange={(e) => {
                                   setVideoType(e.target.value);
@@ -1508,7 +1507,7 @@ const MovieDialog = (props) => {
                               </select>
                             </div>
                           </div>
-                          <div class="col-md-6 form-group">
+                          <div className="col-md-6 form-group">
                             <label
                               className="movieForm"
                               onChange={(e) => setVideoUrl(e.target.value)}
@@ -1523,7 +1522,7 @@ const MovieDialog = (props) => {
                                     type="text"
                                     id="link"
                                     placeholder="Link"
-                                    class="form-control "
+                                    className="form-control "
                                     value={youtubeUrl}
                                     onChange={(e) => {
                                       setYoutubeUrl(e.target.value);
@@ -1570,7 +1569,7 @@ const MovieDialog = (props) => {
                                     type="text"
                                     id="link"
                                     placeholder="Link"
-                                    class="form-control "
+                                    className="form-control "
                                     value={m3u8Url}
                                     onChange={(e) => {
                                       setM3u8Url(e.target.value);
@@ -1609,7 +1608,7 @@ const MovieDialog = (props) => {
                                     type="text"
                                     id="link"
                                     placeholder="Link"
-                                    class="form-control "
+                                    className="form-control "
                                     value={movUrl}
                                     onChange={(e) => {
                                       setMovUrl(e.target.value);
@@ -1648,7 +1647,7 @@ const MovieDialog = (props) => {
                                     type="text"
                                     id="link"
                                     placeholder="Link"
-                                    class="form-control "
+                                    className="form-control "
                                     value={mp4Url}
                                     onChange={(e) => {
                                       setMp4Url(e.target.value);
@@ -1687,7 +1686,7 @@ const MovieDialog = (props) => {
                                     type="text"
                                     id="link"
                                     placeholder="Link"
-                                    class="form-control "
+                                    className="form-control "
                                     value={mkvUrl}
                                     onChange={(e) => {
                                       setMkvUrl(e.target.value);
@@ -1726,7 +1725,7 @@ const MovieDialog = (props) => {
                                     type="text"
                                     id="link"
                                     placeholder="Link"
-                                    class="form-control "
+                                    className="form-control "
                                     value={webmUrl}
                                     onChange={(e) => {
                                       setWebmUrl(e.target.value);
@@ -1765,7 +1764,7 @@ const MovieDialog = (props) => {
                                     type="text"
                                     id="link"
                                     placeholder="Link"
-                                    class="form-control "
+                                    className="form-control "
                                     value={embedUrl}
                                     onChange={(e) => {
                                       setEmbedUrl(e.target.value);
@@ -1830,7 +1829,7 @@ const MovieDialog = (props) => {
                                     />
 
                                     <div
-                                      class="img-container"
+                                      className="img-container"
                                       style={{
                                         display: "inline",
                                         position: "relative",
@@ -1848,7 +1847,7 @@ const MovieDialog = (props) => {
                                     id="customFile"
                                     className="form-control"
                                     accept="video/*"
-                                    required=""
+                                    required
                                     // onChange={videoLoad}
                                     onChange={handleVideoSelect}
                                   />
@@ -1879,7 +1878,7 @@ const MovieDialog = (props) => {
                                         />
 
                                         <div
-                                          class="img-container"
+                                          className="img-container"
                                           style={{
                                             display: "inline",
                                             position: "relative",
@@ -1893,7 +1892,7 @@ const MovieDialog = (props) => {
                               )}
                             </div>
                           </div>
-                          <div class="col-md-6 form-group">
+                          <div className="col-md-6 form-group">
                             <label className="styleForTitle movieForm">
                               Genre
                             </label>
@@ -1910,7 +1909,7 @@ const MovieDialog = (props) => {
                               }
                             />
                           </div>
-                          <div class="col-md-6 form-group">
+                          <div className="col-md-6 form-group">
                             <label className="float-left movieForm">
                               Trailer URL(YouTube Only)
                             </label>
@@ -1919,7 +1918,7 @@ const MovieDialog = (props) => {
                                 type="text"
                                 placeholder="https://www.youtube.com"
                                 className="form-control form-control-line"
-                                Required
+                                required
                                 value={trailerUrl}
                               />
                             ) : (
@@ -1927,7 +1926,7 @@ const MovieDialog = (props) => {
                                 type="text"
                                 placeholder="https://www.youtube.com"
                                 className="form-control form-control-line"
-                                Required
+                                required
                                 value={movieDetailsTmdb?.trailerUrl}
                                 onChange={(e) => {
                                   setTrailerUrl(e.target.value);
@@ -1961,7 +1960,7 @@ const MovieDialog = (props) => {
                               </div>
                             )}
                           </div>
-                          <div class="col-md-12 form-group">
+                          <div className="col-md-12 form-group">
                             <label
                               htmlFor="description"
                               className="styleForTitle mt-3 movieForm"
@@ -1972,7 +1971,9 @@ const MovieDialog = (props) => {
                             <SunEditor
                               value={movieDetailsTmdb?.description}
                               setContents={movieDetailsTmdb?.description}
-                              ref={editor}
+                              getSunEditorInstance={(instance) => {
+  editor.current = instance;
+}}
                               height={300}
                               placeholder="Description"
                               setOptions={{
@@ -1997,7 +1998,7 @@ const MovieDialog = (props) => {
                               }}
                             />
                           </div>
-                          <div class=" form-group pl-3">
+                          <div className=" form-group pl-3">
                             <label className="mt-3 movieForm">Thumbnail </label>
                             <div className="d-flex justify-content-center align-item-center">
                               <img
@@ -2035,7 +2036,7 @@ const MovieDialog = (props) => {
                               ""
                             )}
                           </div>
-                          <div class="pl-3 form-group">
+                          <div className="pl-3 form-group">
                             <label className="mt-3 movieForm">Image</label>
                             <div className="d-flex justify-content-center align-item-center">
                               <img
@@ -2085,7 +2086,7 @@ const MovieDialog = (props) => {
                         <div className=" ">
                           <div className=" p-3">
                             <div className="row p-0">
-                              <div class="col-6 form-group">
+                              <div className="col-6 form-group">
                                 <label className="float-left styleForTitle movieForm">
                                   Title
                                 </label>
@@ -2094,7 +2095,7 @@ const MovieDialog = (props) => {
                                   type="text"
                                   placeholder="Title"
                                   className="form-control form-control-line"
-                                  Required
+                                  required
                                   name="title"
                                   value={title}
                                   onChange={(e) => {
@@ -2139,7 +2140,7 @@ const MovieDialog = (props) => {
                                   type="data"
                                   placeholder="YYYY-MM-DD"
                                   className="form-control form-control-line"
-                                  Required
+                                  required
                                   min="1950"
                                   value={year}
                                   onChange={(e) => {
@@ -2269,7 +2270,7 @@ const MovieDialog = (props) => {
                                   </div>
                                 )}
                               </div>
-                              <div class="col-md-6 form-group">
+                              <div className="col-md-6 form-group">
                                 <label className="styleForTitle movieForm">
                                   Video Type
                                 </label>
@@ -2277,7 +2278,7 @@ const MovieDialog = (props) => {
                                   <select
                                     id="contentType"
                                     name="contentType"
-                                    class="form-select form-control-line"
+                                    className="form-select form-control-line"
                                     required
                                     value={videoType}
                                     onChange={(e) => {
@@ -2378,7 +2379,7 @@ const MovieDialog = (props) => {
                                   </div>
                                 )}
                               </div>
-                              <div class="col-md-6 form-group">
+                              <div className="col-md-6 form-group">
                                 <label
                                   className="movieForm"
                                   onChange={(e) => {
@@ -2418,7 +2419,7 @@ const MovieDialog = (props) => {
                                       type="text"
                                       id="link"
                                       placeholder="Link"
-                                      class="form-control "
+                                      className="form-control "
                                       value={youtubeUrl}
                                       onChange={(e) => {
                                         setYoutubeUrl(e.target.value);
@@ -2432,7 +2433,7 @@ const MovieDialog = (props) => {
                                       type="text"
                                       id="link"
                                       placeholder="Link"
-                                      class="form-control "
+                                      className="form-control "
                                       value={m3u8Url}
                                       onChange={(e) => {
                                         setM3u8Url(e.target.value);
@@ -2446,7 +2447,7 @@ const MovieDialog = (props) => {
                                       type="text"
                                       id="link"
                                       placeholder="Link"
-                                      class="form-control "
+                                      className="form-control "
                                       value={movUrl}
                                       onChange={(e) => {
                                         setMovUrl(e.target.value);
@@ -2460,7 +2461,7 @@ const MovieDialog = (props) => {
                                       type="text"
                                       id="link"
                                       placeholder="Link"
-                                      class="form-control "
+                                      className="form-control "
                                       value={mp4Url}
                                       onChange={(e) => {
                                         setMp4Url(e.target.value);
@@ -2474,7 +2475,7 @@ const MovieDialog = (props) => {
                                       type="text"
                                       id="link"
                                       placeholder="Link"
-                                      class="form-control "
+                                      className="form-control "
                                       value={mkvUrl}
                                       onChange={(e) => {
                                         setMkvUrl(e.target.value);
@@ -2488,7 +2489,7 @@ const MovieDialog = (props) => {
                                       type="text"
                                       id="link"
                                       placeholder="Link"
-                                      class="form-control "
+                                      className="form-control "
                                       value={webmUrl}
                                       onChange={(e) => {
                                         setWebmUrl(e.target.value);
@@ -2502,7 +2503,7 @@ const MovieDialog = (props) => {
                                       type="text"
                                       id="link"
                                       placeholder="Link"
-                                      class="form-control "
+                                      className="form-control "
                                       value={embedUrl}
                                       onChange={(e) => {
                                         setEmbedUrl(e.target.value);
@@ -2517,7 +2518,7 @@ const MovieDialog = (props) => {
                                       id="customFile"
                                       className="form-control"
                                       accept="video/*"
-                                      required=""
+                                      required
                                       // onChange={videoLoad}
                                       onChange={handleVideoSelect}
                                     />
@@ -2549,7 +2550,7 @@ const MovieDialog = (props) => {
                                           />
 
                                           <div
-                                            class="img-container"
+                                            className="img-container"
                                             style={{
                                               display: "inline",
                                               position: "relative",
@@ -2609,7 +2610,7 @@ const MovieDialog = (props) => {
                                   ""
                                 )}
                               </div>
-                              <div class="col-md-12 form-group">
+                              <div className="col-md-12 form-group">
                                 <label
                                   htmlFor="description"
                                   className="styleForTitle mt-3 movieForm"
@@ -2620,7 +2621,9 @@ const MovieDialog = (props) => {
                                 <SunEditor
                                   value={description}
                                   setContents={description}
-                                  ref={editor}
+                                  getSunEditorInstance={(instance) => {
+  editor.current = instance;
+}}
                                   height={318}
                                   onChange={(e) => {
                                     setDescription(e);
@@ -2671,10 +2674,10 @@ const MovieDialog = (props) => {
                                           id="customFile"
                                           name="thumbnailImageResURL"
                                           accept="image/png, image/jpeg ,image/jpg"
-                                          Required=""
+                                          required
                                           // onChange={thumbnailLoad}
                                           style={{ display: "none" }}
-                                          enctype="multipart/form-data"
+                                          encType="multipart/form-data"
                                           // onChange={handleFileUpload}
                                           onChange={handleFileChange}
                                         />
@@ -2716,10 +2719,10 @@ const MovieDialog = (props) => {
                                             className="form-control"
                                             id="customFile"
                                             accept="image/png, image/jpeg ,image/jpg"
-                                            Required=""
+                                            required
                                             // onChange={thumbnailLoad}
                                             style={{ display: "none" }}
-                                            enctype="multipart/form-data"
+                                            encType="multipart/form-data"
                                             onChange={handleFileUpload}
                                           />
                                           {/*  */}
@@ -2784,13 +2787,13 @@ const MovieDialog = (props) => {
                                           id="customFile"
                                           name="movieImageResURL"
                                           accept="image/png, image/jpeg ,image/jpg"
-                                          Required=""
+                                          required
                                           // onChange={imageLoad}
                                           style={{
                                             display: "none",
                                             borderRadius: "5px",
                                           }}
-                                          enctype="multipart/form-data"
+                                          encType="multipart/form-data"
                                           // onChange={handleImageUpload}
                                           onChange={handleFileChange}
                                         />
@@ -2836,10 +2839,10 @@ const MovieDialog = (props) => {
                                             className="form-control"
                                             id="customFile"
                                             accept="image/png, image/jpeg ,image/jpg"
-                                            Required=""
+                                            required
                                             // onChange={imageLoad}
                                             style={{ display: "none" }}
-                                            enctype="multipart/form-data"
+                                            encType="multipart/form-data"
                                           />
                                           {/*  */}
                                         </div>

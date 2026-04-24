@@ -65,14 +65,14 @@ const UserRaisedTicket = (props) => {
             <div className="col-sm-12">
               <div className="iq-card mb-5 mt-2">
                 <div className="iq-card-header d-flex justify-content-between">
-                  <div class="iq-header-title">
-                    <h4 class="card-title">Raised Ticket</h4>
+                  <div className="iq-header-title">
+                    <h4 className="card-title">Raised Ticket</h4>
                   </div>
                   <div className="text-center sm ">
                     <div className="d-flex">
                       <button
                         type="button"
-                        class={`btn ${type === "Pending" ? "activeBtn" : "noneBtn"
+                        className={`btn ${type === "Pending" ? "activeBtn" : "noneBtn"
                           }`}
                         style={{ marginRight: "10px", cursor: "pointer" }}
                         data-bs-toggle="modal"
@@ -84,7 +84,7 @@ const UserRaisedTicket = (props) => {
                       </button>
                       <button
                         type="button"
-                        class={`btn ${type === "Solved" ? "activeBtn" : "noneBtn"
+                        className={`btn ${type === "Solved" ? "activeBtn" : "noneBtn"
                           }`}
                         style={{ cursor: "pointer" }}
                         data-bs-toggle="modal"
@@ -106,7 +106,7 @@ const UserRaisedTicket = (props) => {
                         role="grid"
                         aria-describedby="user-list-page-info"
                       >
-                        <thead class="text-nowrap">
+                        <thead className="text-nowrap">
                           <tr>
                             <th className="text-center">No</th>
                             <th className="d-flex justify-content-center align-items-center">
@@ -126,7 +126,7 @@ const UserRaisedTicket = (props) => {
                               return (
                                 <>
                                   <tr>
-                                    <td class="text-center">{(activePage - 1) * rowsPerPage + index + 1}</td>
+                                    <td className="text-center">{(activePage - 1) * rowsPerPage + index + 1}</td>
                                     <td className="text-center">
                                       <img
                                         className="rounded-circle img-fluid avatar-40"
@@ -186,7 +186,7 @@ const UserRaisedTicket = (props) => {
                         role="grid"
                         aria-describedby="user-list-page-info"
                       >
-                        <thead class="text-nowrap">
+                        <thead className="text-nowrap">
                           <tr>
                             <th className="text-center">No</th>
                             <th className="d-flex justify-content-center align-items-center">
@@ -205,7 +205,7 @@ const UserRaisedTicket = (props) => {
                               return (
                                 <>
                                   <tr>
-                                    <td class="text-center">{index + 1}</td>
+                                    <td className="text-center">{index + 1}</td>
                                     <td className="text-center">
                                       <img
                                         className="rounded-circle img-fluid avatar-40"

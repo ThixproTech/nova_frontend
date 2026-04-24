@@ -111,7 +111,7 @@ const LiveTv = (props) => {
         <div className="container-fluid">
           <div className="align-items-center d-flex justify-content-end">
             <h4 className="card-title mr-3">Show In App</h4>
-            <label class="switch mb-0">
+            <label className="switch mb-0">
               <Switch
                 onChange={() => handleSwitch_("IptvAPI", isIptvAPI)}
                 checked={isIptvAPI}
@@ -124,44 +124,44 @@ const LiveTv = (props) => {
             </label>
           </div>
           <div className="iq-card mt-2">
-            <div class="iq-card-header d-flex justify-content-between">
+            <div className="iq-card-header d-flex justify-content-between">
               <div className="iq-header-title w-50">
-                <h4 class="card-title ml-0">Live TV</h4>
+                <h4 className="card-title ml-0">Live TV</h4>
               </div>
-              <div class="d-flex justify-content-end w-50">
+              <div className="d-flex justify-content-end w-50">
                 <button
                   type="button"
-                  class="btn dark-icon btn-primary "
+                  className="btn dark-icon btn-primary "
                   style={{ marginRight: "10px" }}
                   data-bs-toggle="modal"
                   id="create-btn"
                   data-bs-target="#showModal"
                   onClick={insertOpen}
                 >
-                  <i class="ri-add-line align-bottom me-1 fs-6"></i> Fetch
+                  <i className="ri-add-line align-bottom me-1 fs-6"></i> Fetch
                 </button>
                 <button
                   type="button"
-                  class="btn dark-icon btn-primary "
+                  className="btn dark-icon btn-primary "
                   data-bs-toggle="modal"
                   id="create-btn"
                   data-bs-target="#showModal"
                   onClick={insertManualLiveTv}
                 >
-                  <i class="ri-add-line align-bottom me-1 fs-6"></i> Add
+                  <i className="ri-add-line align-bottom me-1 fs-6"></i> Add
                 </button>
               </div>
             </div>
           </div>
-          <div class="row p-0 mb-5">
+          <div className="row p-0 mb-5">
             {data?.length > 0 ? (
               <>
                 {data?.map((data, index) => {
                   return (
                     <React.Fragment key={index}>
-                      <div class="col-3 mt-4">
+                      <div className="col-3 mt-4">
                         <div
-                          class="iq-card shadow-none border-2 pointer-cursor"
+                          className="iq-card shadow-none border-2 pointer-cursor"
                           onClick={() => setSelectedChannel(data)} // 👈 open player
                           style={{ cursor: "pointer" }}
                         >
@@ -187,7 +187,7 @@ const LiveTv = (props) => {
                           </div>
 
                           <div
-                            class="iq-card-body rowspan-2"
+                            className="iq-card-body rowspan-2"
                             style={{ padding: "1px" }}
                           >
                             <div className="row ">
@@ -215,7 +215,7 @@ const LiveTv = (props) => {
                             <div className=" d-flex justify-content-end">
                               <button
                                 type="button"
-                                class="btn custom-action-button mr-2"
+                                className="btn custom-action-button mr-2"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   handelEditManual(data);
@@ -225,7 +225,7 @@ const LiveTv = (props) => {
                               </button>
                               <button
                                 type="button"
-                                class="btn custom-action-button "
+                                className="btn custom-action-button "
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   deleteOpen(data?._id);
@@ -246,8 +246,8 @@ const LiveTv = (props) => {
               // [...Array(9)].map((x, i) => {
               //   return (
               //     <React.Fragment key={i}>
-              //       <div class="col-3">
-              //         <div class="iq-card shadow-none border-2 pointer-cursor">
+              //       <div className="col-3">
+              //         <div className="iq-card shadow-none border-2 pointer-cursor">
               //           <div
               //             style={{
               //               boxShadow: "0 5px 15px 0 rgb(105 103 103 / 0%)",
@@ -266,7 +266,7 @@ const LiveTv = (props) => {
               //             />
               //           </div>
               //           <div
-              //             class="iq-card-body rowspan-2"
+              //             className="iq-card-body rowspan-2"
               //             style={{ padding: "1px" }}
               //           >
               //             <div className="row ">

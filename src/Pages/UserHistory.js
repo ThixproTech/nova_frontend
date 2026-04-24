@@ -123,8 +123,8 @@ const UserHistory = (props) => {
             <div className="col-sm-12">
               <div className="iq-card mb-5 mt-2" id="card">
                 <div className="iq-card-header d-flex justify-content-between ">
-                  <div class="iq-header-title w-100">
-                    <h4 class="card-title">{user?.fullName}'s History</h4>
+                  <div className="iq-header-title w-100">
+                    <h4 className="card-title">{user?.fullName}'s History</h4>
                   </div>
                   <div className="row w-100">
                     <div className="col-xs-12 col-sm-12 float-left">
@@ -165,7 +165,7 @@ const UserHistory = (props) => {
                             <input
                               readOnly
                               type="text"
-                              class="btn dark-icon btn-primary"
+                              className="btn dark-icon btn-primary"
                               value="Analytics"
                               style={{
                                 width: 120,

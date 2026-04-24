@@ -323,7 +323,7 @@ const SeasonDialogue = (props) => {
         maxWidth="sm"
       >
         <div className="modal-header">
-          <h2 class="modal-title m-0">
+          <h2 className="modal-title m-0">
             {dialogData ? <h5>Edit Season</h5> : <h5>Add Season</h5>}
           </h2>
           <button

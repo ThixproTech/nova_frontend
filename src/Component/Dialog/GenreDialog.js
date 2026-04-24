@@ -54,8 +54,8 @@ const GenreDialog = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: OPEN_LOADER });
-
-
+    
+    
     if (!name || !imagePath) {
       const error = {};
       if (!name) error.name = 'Name is Required!';
@@ -64,7 +64,7 @@ const GenreDialog = (props) => {
       dispatch({ type: CLOSE_LOADER });
       return;
     }
-
+    
     let uploadedImageURL = imagePath;
     if (image && typeof image !== 'string') {
       const formData = new FormData();
@@ -72,13 +72,14 @@ const GenreDialog = (props) => {
       formData.append('keyName', image.name);
       formData.append('content', image);
 
-      const response = await fetch(baseURL + `file/upload-file`, {
+      const response = await fetch(baseURL + `/file/upload-file`, {
         method: 'POST',
         headers: {
           key: secretKey,
         },
         body: formData,
       });
+      
 
       const responseData = await response.json();
       if (responseData?.url) {
@@ -141,7 +142,7 @@ const GenreDialog = (props) => {
         open={open}
         aria-labelledby="responsive-dialog-title"
         onClose={handleClose}
-        disableBackdropClick
+        disablebackdropclick="true"
         disableEscapeKeyDown
         fullWidth
         maxWidth="sm"
@@ -149,7 +150,7 @@ const GenreDialog = (props) => {
 
 
         <div className="modal-header">
-          {dialogData ? <h2 class="modal-title m-0">Edit Genre</h2> : <h2 class="modal-title m-0">Add Genre</h2>}
+          {dialogData ? <h2 className="modal-title m-0">Edit Genre</h2> : <h2 className="modal-title m-0">Add Genre</h2>}
           <button
             className="btn btn-sm custom-action-button"
             onClick={handleClose}
@@ -210,7 +211,7 @@ const GenreDialog = (props) => {
                       id="customFile"
                       className="form-control"
                       accept="image/png"
-                      Required=""
+                      required
                       onChange={imageLoad}
                     />
                     <p className='extention-show'>Accept only .png, .jpeg and .jpg</p>

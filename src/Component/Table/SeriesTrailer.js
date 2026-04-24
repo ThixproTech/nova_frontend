@@ -196,10 +196,10 @@ const SeriesTrailer = (props) => {
               <h4 className="card-title my-0">{movieTitle} : Trailer </h4>
 
               <div className="d-flex">
-                <div class="form-group mb-0 d-flex mr-3 ">
+                <div className="form-group mb-0 d-flex mr-3 ">
                   <input
                     type="search"
-                    class="form-control"
+                    className="form-control"
                     id="input-search"
                     placeholder="Search"
                     aria-controls="user-list-table"
@@ -208,13 +208,13 @@ const SeriesTrailer = (props) => {
                 </div>
                 <button
                   type="button"
-                  class="btn dark-icon btn-primary"
+                  className="btn dark-icon btn-primary"
                   data-bs-toggle="modal"
                   id="create-btn"
                   data-bs-target="#showModal"
                   onClick={insertOpen}
                 >
-                  <i class="ri-add-line align-bottom me-1 fs-6"></i> Add
+                  <i className="ri-add-line align-bottom me-1 fs-6"></i> Add
                 </button>
               </div>
               {/* <div className="iq-header-title">
@@ -316,7 +316,7 @@ const SeriesTrailer = (props) => {
                               onClick={() => MovieDetails(data.movieId)}
                             >
                               <i
-                                class="ri-information-line"
+                                className="ri-information-line"
                                 style={{ fontSize: "19px" }}
                               ></i>
                             </button>
@@ -346,7 +346,7 @@ const SeriesTrailer = (props) => {
                                           onClick={() => deleteOpen(data._id)}
                                         >
                                           <i
-                                            class="ri-delete-bin-6-line"
+                                            className="ri-delete-bin-6-line"
                                             style={{ fontSize: '19px' }}
                                           ></i>
                                         </button>

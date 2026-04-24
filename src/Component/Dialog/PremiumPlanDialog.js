@@ -145,7 +145,7 @@ const PremiumPlanDialog = (props) => {
 
 
         <div className="modal-header">
-          <h2 class="modal-title m-0"> {dialogData ? "Edit Premium Plan" : "Add Premium Plan"}</h2>
+          <h2 className="modal-title m-0"> {dialogData ? "Edit Premium Plan" : "Add Premium Plan"}</h2>
           <button
             className="btn btn-sm custom-action-button"
             onClick={handleClose}
@@ -366,7 +366,7 @@ const PremiumPlanDialog = (props) => {
                     Plan Benefit
                   </label>
                   <textarea
-                    class="form-control h-auto"
+                    className="form-control h-auto"
                     placeholder="Plan Benefit"
                     id="exampleFormControlTextarea1"
                     rows="3"

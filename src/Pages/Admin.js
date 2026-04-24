@@ -249,7 +249,7 @@ const Admin = () => {
         </Switch>
         {/* <Loader /> */}
       </div>
-      {/* <div class="vertical-overlay"></div> */}
+      {/* <div className="vertical-overlay"></div> */}
     </>
   );
 };

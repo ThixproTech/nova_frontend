@@ -257,7 +257,7 @@ const LiveTvEditDialogue = (props) => {
         maxWidth="sm"
       >
         <div className="modal-header">
-          <h2 class="modal-title m-0">
+          <h2 className="modal-title m-0">
             {dialogueData ? "Update LiveTv" : "Create LiveTv"}
           </h2>
           <button

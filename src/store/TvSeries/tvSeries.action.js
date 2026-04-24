@@ -26,7 +26,7 @@ import { api } from '../..';
 export const getSeries = (start, limit, search) => (dispatch) => {
   api
     .get(
-      `${baseURL}movie/all?type=WEBSERIES&&start=${start}&&limit=${limit}&search=${search}`
+      `${baseURL}/movie/all?type=WEBSERIES&&start=${start}&&limit=${limit}&search=${search}`
     )
     .then((res) => {
       if (res.status) {

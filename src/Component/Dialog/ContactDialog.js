@@ -284,7 +284,7 @@ const ContactDialog = (props) => {
         </Tooltip> */}
 
         <div className="modal-header">
-          <h2 class="modal-title m-0">{dialogData ? "Edit Contact" : "Add Contact"}</h2>
+          <h2 className="modal-title m-0">{dialogData ? "Edit Contact" : "Add Contact"}</h2>
           <button
             className="btn btn-sm custom-action-button"
             onClick={handleClose}

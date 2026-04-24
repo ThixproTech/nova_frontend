@@ -363,7 +363,7 @@ const EpisodeListDialogue = ({ page, size }) => {
       maxWidth="sm"
     >
       <div className="modal-header">
-        <h2 class="modal-title m-0">
+        <h2 className="modal-title m-0">
           {dialogData?._id ? "Update Movie Episode" : "Add Movie Episode"}
         </h2>
         <button

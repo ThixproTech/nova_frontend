@@ -339,13 +339,13 @@ const TrailerForm = (props) => {
     <>
       <div
         id="content-page"
-        class="content-page"
+        className="content-page"
         style={{ marginRight: "0px" }}
       >
-        <div class="container-fluid">
+        <div className="container-fluid">
           <div className="iq-card mt-4">
             <div className="iq-card-header">
-              <h4 class="card-title">Trailer</h4>
+              <h4 className="card-title">Trailer</h4>
             </div>
             <div className="iq-card-body p-3">
               <form>
@@ -481,7 +481,7 @@ const TrailerForm = (props) => {
                         <select
                           id="contentType"
                           name="contentType"
-                          class="form-select form-control-line"
+                          className="form-select form-control-line"
                           required
                           // value={videoType}
                           value={videoType || "select"}
@@ -592,7 +592,7 @@ const TrailerForm = (props) => {
                               type="text"
                               // id="link"
                               placeholder="Link"
-                              class="form-control "
+                              className="form-control "
                               // value={videoUrl}
                               value={videoUrl || ""}
                               onChange={(e) => {
@@ -643,7 +643,7 @@ const TrailerForm = (props) => {
                                 />
 
                                 <div
-                                  class="img-container"
+                                  className="img-container"
                                   style={{
                                     display: "inline",
                                     position: "relative",

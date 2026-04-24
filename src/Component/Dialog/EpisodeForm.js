@@ -509,19 +509,19 @@ const EpisodeForm = (props) => {
 
   return (
     <>
-      <div id="content-page" class="content-page">
-        <div class="container-fluid">
-          {/* <div class="row">
-              <div class="col-12">
-                <div class="page-title-box d-sm-flex align-items-center justify-content-between mt-2 mb-3">
-                  <h4 class="ml-3">Episode</h4>
+      <div id="content-page" className="content-page">
+        <div className="container-fluid">
+          {/* <div className="row">
+              <div className="col-12">
+                <div className="page-title-box d-sm-flex align-items-center justify-content-between mt-2 mb-3">
+                  <h4 className="ml-3">Episode</h4>
                 </div>
               </div>
             </div> */}
 
           <div className="iq-card mt-4">
             <div className="iq-card-header">
-              <h4 class="card-title">Episode</h4>
+              <h4 className="card-title">Episode</h4>
             </div>
             <div className=" iq-card-body p-3">
               <form>
@@ -710,7 +710,7 @@ const EpisodeForm = (props) => {
                       <select
                         id="contentType"
                         name="contentType"
-                        class="form-select form-control-line"
+                        className="form-select form-control-line"
                         required
                         value={videoType}
                         onChange={(e) => {
@@ -760,7 +760,7 @@ const EpisodeForm = (props) => {
                               type="text"
                               id="link"
                               placeholder="Link"
-                              class="form-control "
+                              className="form-control "
                               value={youtubeUrl}
                               onChange={(e) => {
                                 setYoutubeUrl(e.target.value);
@@ -794,7 +794,7 @@ const EpisodeForm = (props) => {
                               type="text"
                               id="link"
                               placeholder="Link"
-                              class="form-control "
+                              className="form-control "
                               value={m3u8Url}
                               onChange={(e) => {
                                 setM3u8Url(e.target.value);
@@ -828,7 +828,7 @@ const EpisodeForm = (props) => {
                               type="text"
                               id="link"
                               placeholder="Link"
-                              class="form-control "
+                              className="form-control "
                               value={movUrl}
                               onChange={(e) => {
                                 setMovUrl(e.target.value);
@@ -862,7 +862,7 @@ const EpisodeForm = (props) => {
                               type="text"
                               id="link"
                               placeholder="Link"
-                              class="form-control "
+                              className="form-control "
                               value={mp4Url}
                               onChange={(e) => {
                                 setMp4Url(e.target.value);
@@ -896,7 +896,7 @@ const EpisodeForm = (props) => {
                               type="text"
                               id="link"
                               placeholder="Link"
-                              class="form-control "
+                              className="form-control "
                               value={mkvUrl}
                               onChange={(e) => {
                                 setMkvUrl(e.target.value);
@@ -934,7 +934,7 @@ const EpisodeForm = (props) => {
                               type="text"
                               id="link"
                               placeholder="Link"
-                              class="form-control "
+                              className="form-control "
                               value={webmUrl}
                               onChange={(e) => {
                                 setWebmUrl(e.target.value);
@@ -972,7 +972,7 @@ const EpisodeForm = (props) => {
                               type="text"
                               id="link"
                               placeholder="Link"
-                              class="form-control "
+                              className="form-control "
                               value={embedUrl}
                               onChange={(e) => {
                                 setEmbedUrl(e.target.value);
@@ -1041,7 +1041,7 @@ const EpisodeForm = (props) => {
                                     }}
                                   />
                                   <div
-                                    class="img-container"
+                                    className="img-container"
                                     style={{
                                       display: "inline",
                                       position: "relative",

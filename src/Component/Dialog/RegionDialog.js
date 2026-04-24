@@ -131,7 +131,7 @@ const RegionDialog = (props) => {
       maxWidth="sm"
     >
       <div className="modal-header">
-        <h2 class="modal-title m-0">
+        <h2 className="modal-title m-0">
           {dialogData ? <h5>Edit Region</h5> : <h5>Add Region</h5>}
         </h2>
         <button
@@ -192,7 +192,7 @@ const RegionDialog = (props) => {
                       Image
                     </label>
                     <input
-                      class="form-control form-control-sm"
+                      className="form-control form-control-sm"
                       id="customFile"
                       type="file"
                       accept="image/png, image/jpeg ,image/jpg"

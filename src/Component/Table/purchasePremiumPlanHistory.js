@@ -122,8 +122,8 @@ const PurchasePremiumPlanTable = (props) => {
 
               <div className="iq-card mb-5 mt-2" id="card">
                 <div className="iq-card-header">
-                <div class="iq-header-title w-100">
-                <h4 class="card-title">Purchase Plan History</h4>
+                <div className="iq-header-title w-100">
+                <h4 className="card-title">Purchase Plan History</h4>
               </div>
                   <div className="d-flex justify-content-end w-100">
                     <button
@@ -149,7 +149,7 @@ const PurchasePremiumPlanTable = (props) => {
                         <input
                           readOnly
                           type="text"
-                          class="btn dark-icon btn-primary"
+                          className="btn dark-icon btn-primary"
                           value="Analytics"
                           style={{
                             width: 120,
@@ -191,7 +191,7 @@ const PurchasePremiumPlanTable = (props) => {
                             <input
                               readOnly
                               type="text"
-                              class="daterange form-control float-left bg-primary text-white"
+                              className="daterange form-control float-left bg-primary text-white"
                               placeholder="Select Date"
                               style={{ width: 120, fontWeight: 700 }}
                             />

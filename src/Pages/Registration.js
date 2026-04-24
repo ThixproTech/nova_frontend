@@ -85,7 +85,7 @@ const Registration = (props) => {
                 credentials to continue your journey on {projectName}.
               </p>
               <form>
-                <div class="custom-input form-group">
+                <div className="custom-input form-group">
                   <label className="float-left">Email</label>
                   <input
                     type="email"
@@ -117,7 +117,7 @@ const Registration = (props) => {
 
                 </div>
 
-                <div class="custom-input form-group">
+                <div className="custom-input form-group">
                   <label
                     for="floatingPassword"
                     className="float-left"
@@ -154,7 +154,7 @@ const Registration = (props) => {
 
                 </div>
 
-                <div class="custom-input form-group">
+                <div className="custom-input form-group">
                   <label
                     for="floatingPassword"
 
@@ -164,7 +164,7 @@ const Registration = (props) => {
                   </label>
                   <input
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     id="newPassword"
                     name="newPassword"
                     placeholder="Confirm Password"
@@ -192,7 +192,7 @@ const Registration = (props) => {
 
                 </div>
 
-                <div class="custom-input form-group">
+                <div className="custom-input form-group">
                   <label
                     for="floatingPassword"
                     c
@@ -202,7 +202,7 @@ const Registration = (props) => {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="code"
                     name="code"
                     placeholder="Purchase code"

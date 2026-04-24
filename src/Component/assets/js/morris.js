@@ -850,7 +850,7 @@ import jQuery from "jquery";
         options = {};
       }
       this.options = $.extend({}, Morris.Hover.defaults, options);
-      this.el = $("<div class='" + this.options["class"] + "'></div>");
+      this.el = $("<div className='" + this.options["class"] + "'></div>");
       this.el.hide();
       this.options.parent.append(this.el);
     }
@@ -1050,12 +1050,12 @@ import jQuery from "jquery";
     Line.prototype.hoverContentForRow = function (index) {
       var content, j, row, y, _i, _len, _ref;
       row = this.data[index];
-      content = "<div class='morris-hover-row-label'>" + row.label + "</div>";
+      content = "<div className='morris-hover-row-label'>" + row.label + "</div>";
       _ref = row.y;
       for (j = _i = 0, _len = _ref.length; _i < _len; j = ++_i) {
         y = _ref[j];
         content +=
-          "<div class='morris-hover-point' style='color: " +
+          "<div className='morris-hover-point' style='color: " +
           this.colorFor(row, j, "label") +
           "'>\n  " +
           this.options.labels[j] +
@@ -2111,12 +2111,12 @@ import jQuery from "jquery";
     Bar.prototype.hoverContentForRow = function (index) {
       var content, j, row, x, y, _i, _len, _ref;
       row = this.data[index];
-      content = "<div class='morris-hover-row-label'>" + row.label + "</div>";
+      content = "<div className='morris-hover-row-label'>" + row.label + "</div>";
       _ref = row.y;
       for (j = _i = 0, _len = _ref.length; _i < _len; j = ++_i) {
         y = _ref[j];
         content +=
-          "<div class='morris-hover-point' style='color: " +
+          "<div className='morris-hover-point' style='color: " +
           this.colorFor(row, j, "label") +
           "'>\n  " +
           this.options.labels[j] +

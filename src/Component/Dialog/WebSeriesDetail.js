@@ -280,8 +280,8 @@ const WebSeriesDetail = (props) => {
         <div className="container-fluid">
           {/* <div className="row d-flex align-items-center">
                 <div className="col-10">
-                  <div class="iq-header-title">
-                    <h4 class="card-title mb-3">Web Series Details</h4>
+                  <div className="iq-header-title">
+                    <h4 className="card-title mb-3">Web Series Details</h4>
                   </div>
                 </div>
                 <div className="col-2 px-4">
@@ -299,8 +299,8 @@ const WebSeriesDetail = (props) => {
               </div> */}
           <div className="iq-card mt-2 mb-5">
             <div className="iq-card-header d-flex justify-content-between align-items-center">
-              <div class="iq-header-title">
-                <h4 class="card-title">Series Details</h4>
+              <div className="iq-header-title">
+                <h4 className="card-title">Series Details</h4>
               </div>
               <button
                 type="button"
@@ -958,15 +958,15 @@ const WebSeriesDetail = (props) => {
                   <div>
                     <div className="post">
                       <div id="myGroup">
-                        <div class="post-actions">
+                        <div className="post-actions">
                           <h4 className="m-0">Comments</h4>
                         </div>
-                        <div class="post-comments mt-3">
+                        <div className="post-comments mt-3">
                           {comments?.length > 0 ? (
                             comments.map((cmt, index) => {
                               return (
                                 <>
-                                  <div class="post-comm post-padding d-flex justify-content-center border">
+                                  <div className="post-comm post-padding d-flex justify-content-center border">
                                     <div className="d-flex w-100 align-items-center">
                                       <div className="commentImage pr-2">
                                         <img
@@ -990,7 +990,7 @@ const WebSeriesDetail = (props) => {
                                         // }
                                         />
                                       </div>
-                                      <div class="">
+                                      <div className="">
                                         <div
                                         // onClick={() =>
                                         //   handleUserInfo(
@@ -1001,14 +1001,14 @@ const WebSeriesDetail = (props) => {
                                           {cmt.fullName}
                                         </div>
                                         <div className="">{cmt.comment}</div>
-                                        <small class="comment-date float-right d-flex">
+                                        <small className="comment-date float-right d-flex">
                                           <div className="commentTime">
                                             {cmt.time}{" "}
                                           </div>
                                         </small>
                                       </div>
                                     </div>
-                                    <div class="comment-container w-100 d-flex justify-content-end">
+                                    <div className="comment-container w-100 d-flex justify-content-end">
 
                                       <Popconfirm
                                         title="Are you sure to delete this comment?"

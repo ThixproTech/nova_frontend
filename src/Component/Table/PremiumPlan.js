@@ -126,17 +126,17 @@ const PremiumPlan = (props) => {
 
               <div className="iq-card mb-5 mt-2">
                 <div className="iq-card-header d-flex justify-content-between">
-                  <div class="iq-header-title">
-                    <h4 class="card-title">Premium Plan</h4>
+                  <div className="iq-header-title">
+                    <h4 className="card-title">Premium Plan</h4>
                   </div>
 
 
                   <div className="d-flex">
-                    <form class="mr-3">
-                      <div class="form-group mb-0 d-flex">
+                    <form className="mr-3">
+                      <div className="form-group mb-0 d-flex">
                         <input
                           type="search"
-                          class="form-control"
+                          className="form-control"
                           id="input-search"
                           placeholder="Search"
                           aria-controls="user-list-table"
@@ -146,13 +146,13 @@ const PremiumPlan = (props) => {
                     </form>
                     <button
                       type="button"
-                      class="btn dark-icon btn-primary"
+                      className="btn dark-icon btn-primary"
                       data-bs-toggle="modal"
                       id="create-btn"
                       data-bs-target="#showModal"
                       onClick={handleOpen}
                     >
-                      <i class="ri-add-line align-bottom me-1 fs-6"></i> Add
+                      <i className="ri-add-line align-bottom me-1 fs-6"></i> Add
                     </button>
                   </div>
                 </div>
@@ -254,7 +254,7 @@ const PremiumPlan = (props) => {
                                           }
                                         >
                                           <i
-                                            class="ri-delete-bin-6-line"
+                                            className="ri-delete-bin-6-line"
                                             style={{ fontSize: '19px' }}
                                           ></i>
                                         </button>

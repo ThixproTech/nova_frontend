@@ -90,20 +90,20 @@ Docs & License: https://fullcalendar.io/
             if (url) {
                 classes.push('fc-has-url');
             }
-            return '<tr class="' + classes.join(' ') + '">' +
+            return '<tr className="' + classes.join(' ') + '">' +
                 (this.displayEventTime ?
-                    '<td class="fc-list-item-time ' + theme.getClass('widgetContent') + '">' +
+                    '<td className="fc-list-item-time ' + theme.getClass('widgetContent') + '">' +
                         (timeHtml || '') +
                         '</td>' :
                     '') +
-                '<td class="fc-list-item-marker ' + theme.getClass('widgetContent') + '">' +
-                '<span class="fc-event-dot"' +
+                '<td className="fc-list-item-marker ' + theme.getClass('widgetContent') + '">' +
+                '<span className="fc-event-dot"' +
                 (bgColor ?
                     ' style="background-color:' + bgColor + '"' :
                     '') +
                 '></span>' +
                 '</td>' +
-                '<td class="fc-list-item-title ' + theme.getClass('widgetContent') + '">' +
+                '<td className="fc-list-item-title ' + theme.getClass('widgetContent') + '">' +
                 '<a' + (url ? ' href="' + core.htmlEscape(url) + '"' : '') + '>' +
                 core.htmlEscape(eventDef.title || '') +
                 '</a>' +
@@ -223,9 +223,9 @@ Docs & License: https://fullcalendar.io/
         };
         ListView.prototype.renderEmptyMessage = function () {
             this.contentEl.innerHTML =
-                '<div class="fc-list-empty-wrap2">' + // TODO: try less wraps
-                    '<div class="fc-list-empty-wrap1">' +
-                    '<div class="fc-list-empty">' +
+                '<div className="fc-list-empty-wrap2">' + // TODO: try less wraps
+                    '<div className="fc-list-empty-wrap1">' +
+                    '<div className="fc-list-empty">' +
                     core.htmlEscape(this.opt('noEventsMessage')) +
                     '</div>' +
                     '</div>' +
@@ -237,7 +237,7 @@ Docs & License: https://fullcalendar.io/
             var dayIndex;
             var daySegs;
             var i;
-            var tableEl = core.htmlToElement('<table class="fc-list-table ' + this.calendar.theme.getClass('tableList') + '"><tbody></tbody></table>');
+            var tableEl = core.htmlToElement('<table className="fc-list-table ' + this.calendar.theme.getClass('tableList') + '"><tbody></tbody></table>');
             var tbodyEl = tableEl.querySelector('tbody');
             for (dayIndex = 0; dayIndex < segsByDay.length; dayIndex++) {
                 daySegs = segsByDay[dayIndex];
@@ -273,7 +273,7 @@ Docs & License: https://fullcalendar.io/
             return core.createElement('tr', {
                 className: 'fc-list-heading',
                 'data-date': dateEnv.formatIso(dayDate, { omitTime: true })
-            }, '<td class="' + (this.calendar.theme.getClass('tableListHeading') ||
+            }, '<td className="' + (this.calendar.theme.getClass('tableListHeading') ||
                 this.calendar.theme.getClass('widgetHeader')) + '" colspan="3">' +
                 (mainFormat ?
                     core.buildGotoAnchorHtml(this, dayDate, { 'class': 'fc-list-heading-main' }, core.htmlEscape(dateEnv.format(dayDate, mainFormat)) // inner HTML

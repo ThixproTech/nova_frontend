@@ -167,7 +167,7 @@ const ContentForm = (props) => {
         formData.append('keyName', image.name);
         formData.append('content', image);
 
-        const response = await fetch(baseURL + `file/upload-file`, {
+        const response = await fetch(baseURL + `/file/upload-file`, {
           method: 'POST',
           headers: {
             key: secretKey,

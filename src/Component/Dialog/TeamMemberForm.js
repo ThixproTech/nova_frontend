@@ -225,11 +225,11 @@ const TeamMemberForm = (props) => {
 
   return (
     <>
-      <div id="content-page" class="content-page">
-        <div class="container-fluid">
+      <div id="content-page" className="content-page">
+        <div className="container-fluid">
           <div className="iq-card mt-4">
             <div className="iq-card-header">
-              <h4 class="card-title">Cast</h4>
+              <h4 className="card-title">Cast</h4>
             </div>
             <div className=" iq-card-body p-3">
               <form>

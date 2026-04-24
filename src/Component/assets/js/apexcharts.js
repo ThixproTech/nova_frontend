@@ -8805,17 +8805,17 @@
             start = _ref5.start,
             end = _ref5.end;
           return (
-            '<div class="apexcharts-tooltip-rangebar">' +
-            '<div> <span class="series-name" style="color: ' +
+            '<div className="apexcharts-tooltip-rangebar">' +
+            '<div> <span className="series-name" style="color: ' +
             color +
             '">' +
             (seriesName ? seriesName : "") +
             "</span></div>" +
-            '<div> <span class="category">' +
+            '<div> <span className="category">' +
             ylabel +
-            ' </span> <span class="value start-value">' +
+            ' </span> <span className="value start-value">' +
             start +
-            '</span> <span class="separator">-</span> <span class="value end-value">' +
+            '</span> <span className="separator">-</span> <span className="value end-value">' +
             end +
             "</span></div>" +
             "</div>"
@@ -9704,7 +9704,7 @@
             w.config.series[seriesIndex].type &&
             w.config.series[seriesIndex].type !== chartType
           ) {
-            return '<div class="apexcharts-custom-tooltip">\n          '
+            return '<div className="apexcharts-custom-tooltip">\n          '
               .concat(
                 w.config.series[seriesIndex].name
                   ? w.config.series[seriesIndex].name
@@ -9717,25 +9717,25 @@
               );
           } else {
             return (
-              '<div class="apexcharts-tooltip-box apexcharts-tooltip-'.concat(
+              '<div className="apexcharts-tooltip-box apexcharts-tooltip-'.concat(
                 w.config.chart.type,
                 '">'
               ) +
-              "<div>".concat(labels[0], ': <span class="value">') +
+              "<div>".concat(labels[0], ': <span className="value">') +
               o +
               "</span></div>" +
-              "<div>".concat(labels[1], ': <span class="value">') +
+              "<div>".concat(labels[1], ': <span className="value">') +
               h +
               "</span></div>" +
               (m
-                ? "<div>".concat(labels[2], ': <span class="value">') +
+                ? "<div>".concat(labels[2], ': <span className="value">') +
                   m +
                   "</span></div>"
                 : "") +
-              "<div>".concat(labels[3], ': <span class="value">') +
+              "<div>".concat(labels[3], ': <span className="value">') +
               l +
               "</span></div>" +
-              "<div>".concat(labels[4], ': <span class="value">') +
+              "<div>".concat(labels[4], ': <span className="value">') +
               c +
               "</span></div>" +
               "</div>"
@@ -35483,8 +35483,8 @@
         (element.__resizeTriggers__ = document.createElement("div")).className =
           "resize-triggers";
         element.__resizeTriggers__.innerHTML =
-          '<div class="expand-trigger"><div></div></div>' +
-          '<div class="contract-trigger"></div>';
+          '<div className="expand-trigger"><div></div></div>' +
+          '<div className="contract-trigger"></div>';
         element.appendChild(element.__resizeTriggers__);
         resetTriggers(element);
         element.addEventListener("scroll", scrollListener, true);

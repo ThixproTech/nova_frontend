@@ -15302,7 +15302,7 @@
             return r.d(this, function (r) {
               if (
                 ((i = "<table>"),
-                e.tableClass && (i = '<table class="' + e.tableClass + '">'),
+                e.tableClass && (i = '<table className="' + e.tableClass + '">'),
                 (n = this.adapter.apply("formatDataFields", {
                   dataFields: this.dataFields,
                   format: "html",
@@ -15357,7 +15357,7 @@
           var o = this;
           void 0 === n && (n = !1), void 0 === r && (r = !1);
           var a = "\t<tr>";
-          e.rowClass && (a = '\t<tr class="' + e.rowClass + '">'), i || (i = t);
+          e.rowClass && (a = '\t<tr className="' + e.rowClass + '">'), i || (i = t);
           var s = r ? "th" : "td",
             u = !0;
           return (
@@ -15373,7 +15373,7 @@
                   ? (a +=
                       "\n\t\t<" +
                       c +
-                      ' class="' +
+                      ' className="' +
                       e.cellClass +
                       '">' +
                       h +

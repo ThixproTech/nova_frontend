@@ -73,9 +73,9 @@ const Faq = (props) => {
 
   return (
     <>
-      <div id="content-page" class="content-page">
-        <div class="container-fluid">
-          <div class="row">
+      <div id="content-page" className="content-page">
+        <div className="container-fluid">
+          <div className="row">
             <div className="col-lg-12">
               <div className="iq-header-title">
                 <h4>Help Center</h4>
@@ -86,19 +86,19 @@ const Faq = (props) => {
               <div className="iq-card">
 
                 <div className="iq-card-header d-flex justify-content-between">
-                  <div class="iq-header-title">
-                    <h4 class="card-title">FAQ</h4>
+                  <div className="iq-header-title">
+                    <h4 className="card-title">FAQ</h4>
                   </div>
                   <div className="d-flex justify-content-end">
                     <button
                       type="button"
-                      class="btn dark-icon btn-primary"
+                      className="btn dark-icon btn-primary"
                       data-bs-toggle="modal"
                       id="create-btn"
                       data-bs-target="#showModal"
                       onClick={handleOpen}
                     >
-                      <i class="ri-add-line align-bottom me-1 fs-6"></i> Add
+                      <i className="ri-add-line align-bottom me-1 fs-6"></i> Add
                     </button>
                   </div>
                 </div>
@@ -110,28 +110,28 @@ const Faq = (props) => {
                       return (
                         <>
                           <div className="col-md-12 my-2">
-                            <div class="iq-accordion career-style faq-style">
-                              <div class="iq-card iq-accordion-block accordion ">
-                                <div class="active-faq clearfix">
-                                  <div class="container m-0">
-                                    <div class="row">
-                                      <div class="col-sm-12">
-                                        <a class="accordion-title">
+                            <div className="iq-accordion career-style faq-style">
+                              <div className="iq-card iq-accordion-block accordion ">
+                                <div className="active-faq clearfix">
+                                  <div className="container m-0">
+                                    <div className="row">
+                                      <div className="col-sm-12">
+                                        <a className="accordion-title">
                                           <span className="fw-bold"> {data?.question} </span>{" "}
                                         </a>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="accordion-details">
+                                <div className="accordion-details">
                                   <p
-                                    class="mb-0 "
+                                    className="mb-0 "
 
                                   >
                                     {data?.answer}{" "}
                                   </p>
                                 </div>
-                                <div class="contact-card-buttons d-flex justify-content-end pr-2 pb-1">
+                                <div className="contact-card-buttons d-flex justify-content-end pr-2 pb-1">
                                   <button
                                     type="button"
                                     className="btn custom-action-button btn-sm mr-2"
@@ -160,13 +160,13 @@ const Faq = (props) => {
                     //   return (
                     //     <>
                     //       <div className="col-md-12  my-2">
-                    //         <div class="iq-accordion career-style faq-style">
-                    //           <div class="iq-card iq-accordion-block accordion ">
-                    //             <div class="active-faq clearfix">
-                    //               <div class="container m-0">
-                    //                 <div class="row">
-                    //                   <div class="col-sm-12">
-                    //                     <a class="accordion-title">
+                    //         <div className="iq-accordion career-style faq-style">
+                    //           <div className="iq-card iq-accordion-block accordion ">
+                    //             <div className="active-faq clearfix">
+                    //               <div className="container m-0">
+                    //                 <div className="row">
+                    //                   <div className="col-sm-12">
+                    //                     <a className="accordion-title">
                     //                       <Skeleton
                     //                         width="300px"
                     //                         height="20px"
@@ -179,7 +179,7 @@ const Faq = (props) => {
                     //               </div>
                     //             </div>
                     //             <div
-                    //               class="accordion-details"
+                    //               className="accordion-details"
                     //               style={{ marginLeft: "15px" }}
                     //             >
                     //               <Skeleton

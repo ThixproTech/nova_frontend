@@ -232,14 +232,14 @@ Docs & License: https://fullcalendar.io/
             if (seg.isStart) {
                 timeText = this.getTimeText(eventRange);
                 if (timeText) {
-                    timeHtml = '<span class="fc-time">' + core.htmlEscape(timeText) + '</span>';
+                    timeHtml = '<span className="fc-time">' + core.htmlEscape(timeText) + '</span>';
                 }
             }
             titleHtml =
-                '<span class="fc-title">' +
+                '<span className="fc-title">' +
                     (core.htmlEscape(eventDef.title || '') || '&nbsp;') + // we always want one line of height
                     '</span>';
-            return '<a class="' + classes.join(' ') + '"' +
+            return '<a className="' + classes.join(' ') + '"' +
                 (eventDef.url ?
                     ' href="' + core.htmlEscape(eventDef.url) + '"' :
                     '') +
@@ -247,17 +247,17 @@ Docs & License: https://fullcalendar.io/
                     ' style="' + skinCss + '"' :
                     '') +
                 '>' +
-                '<div class="fc-content">' +
+                '<div className="fc-content">' +
                 (options.dir === 'rtl' ?
                     titleHtml + ' ' + timeHtml : // put a natural space in between
                     timeHtml + ' ' + titleHtml //
                 ) +
                 '</div>' +
                 (isResizableFromStart ?
-                    '<div class="fc-resizer fc-start-resizer"></div>' :
+                    '<div className="fc-resizer fc-start-resizer"></div>' :
                     '') +
                 (isResizableFromEnd ?
-                    '<div class="fc-resizer fc-end-resizer"></div>' :
+                    '<div className="fc-resizer fc-end-resizer"></div>' :
                     '') +
                 '</a>';
         };
@@ -486,7 +486,7 @@ Docs & License: https://fullcalendar.io/
             var rowStructs = this.rowStructs = this.renderSegRows(segs);
             // inject each new event skeleton into each associated row
             this.dayGrid.rowEls.forEach(function (rowNode, row) {
-                var skeletonEl = core.htmlToElement('<div class="fc-mirror-skeleton"><table></table></div>'); // will be absolutely positioned
+                var skeletonEl = core.htmlToElement('<div className="fc-mirror-skeleton"><table></table></div>'); // will be absolutely positioned
                 var skeletonTopEl;
                 var skeletonTop;
                 // If there is an original segment, match the top position. Otherwise, put it at the row's top level
@@ -557,7 +557,7 @@ Docs & License: https://fullcalendar.io/
             else {
                 className = type.toLowerCase();
             }
-            skeletonEl = core.htmlToElement('<div class="fc-' + className + '-skeleton">' +
+            skeletonEl = core.htmlToElement('<div className="fc-' + className + '-skeleton">' +
                 '<table><tr></tr></table>' +
                 '</div>');
             trEl = skeletonEl.getElementsByTagName('tr')[0];
@@ -620,14 +620,14 @@ Docs & License: https://fullcalendar.io/
             var title = dateEnv.format(date, core.createFormatter(this.opt('dayPopoverFormat')) // TODO: cache
             );
             this.el.innerHTML =
-                '<div class="fc-header ' + theme.getClass('popoverHeader') + '">' +
-                    '<span class="fc-title">' +
+                '<div className="fc-header ' + theme.getClass('popoverHeader') + '">' +
+                    '<span className="fc-title">' +
                     core.htmlEscape(title) +
                     '</span>' +
-                    '<span class="fc-close ' + theme.getIconClass('close') + '"></span>' +
+                    '<span className="fc-close ' + theme.getIconClass('close') + '"></span>' +
                     '</div>' +
-                    '<div class="fc-body ' + theme.getClass('popoverContent') + '">' +
-                    '<div class="fc-event-container"></div>' +
+                    '<div className="fc-body ' + theme.getClass('popoverContent') + '">' +
+                    '<div className="fc-event-container"></div>' +
                     '</div>';
             this.segContainerEl = this.el.querySelector('.fc-event-container');
         };
@@ -689,7 +689,7 @@ Docs & License: https://fullcalendar.io/
                 parts.push(renderCellHtml(cell.date, props.dateProfile, this.context, cell.htmlAttrs));
             }
             if (!props.cells.length) {
-                parts.push('<td class="fc-day ' + this.context.theme.getClass('widgetContent') + '"></td>');
+                parts.push('<td className="fc-day ' + this.context.theme.getClass('widgetContent') + '"></td>');
             }
             if (this.context.options.dir === 'rtl') {
                 parts.reverse();
@@ -703,7 +703,7 @@ Docs & License: https://fullcalendar.io/
         var isDateValid = core.rangeContainsMarker(dateProfile.activeRange, date); // TODO: called too frequently. cache somehow.
         var classes = core.getDayClasses(date, dateProfile, context);
         classes.unshift('fc-day', theme.getClass('widgetContent'));
-        return '<td class="' + classes.join(' ') + '"' +
+        return '<td className="' + classes.join(' ') + '"' +
             (isDateValid ?
                 ' data-date="' + dateEnv.formatIso(date, { omitTime: true }) + '"' :
                 '') +
@@ -819,9 +819,9 @@ Docs & License: https://fullcalendar.io/
             }
             var bgRow = new DayBgRow(this.context);
             return '' +
-                '<div class="' + classes.join(' ') + '">' +
-                '<div class="fc-bg">' +
-                '<table class="' + theme.getClass('tableGrid') + '">' +
+                '<div className="' + classes.join(' ') + '">' +
+                '<div className="fc-bg">' +
+                '<table className="' + theme.getClass('tableGrid') + '">' +
                 bgRow.renderHtml({
                     cells: this.props.cells[row],
                     dateProfile: this.props.dateProfile,
@@ -829,7 +829,7 @@ Docs & License: https://fullcalendar.io/
                 }) +
                 '</table>' +
                 '</div>' +
-                '<div class="fc-content-skeleton">' +
+                '<div className="fc-content-skeleton">' +
                 '<table>' +
                 (this.getIsNumbersVisible() ?
                     '<thead>' +
@@ -890,7 +890,7 @@ Docs & License: https://fullcalendar.io/
             if (this.renderProps.cellWeekNumbersVisible) {
                 weekCalcFirstDow = dateEnv.weekDow;
             }
-            html += '<td class="' + classes.join(' ') + '"' +
+            html += '<td className="' + classes.join(' ') + '"' +
                 (isDateValid ?
                     ' data-date="' + dateEnv.formatIso(date, { omitTime: true }) + '"' :
                     '') +
@@ -1293,7 +1293,7 @@ Docs & License: https://fullcalendar.io/
                 var theme = _this.theme;
                 if (_this.colWeekNumbersVisible) {
                     return '' +
-                        '<th class="fc-week-number ' + theme.getClass('widgetHeader') + '" ' + _this.weekNumberStyleAttr() + '>' +
+                        '<th className="fc-week-number ' + theme.getClass('widgetHeader') + '" ' + _this.weekNumberStyleAttr() + '>' +
                         '<span>' + // needed for matchCellWidths
                         core.htmlEscape(_this.opt('weekLabel')) +
                         '</span>' +
@@ -1309,7 +1309,7 @@ Docs & License: https://fullcalendar.io/
                 var weekStart = dayGrid.props.cells[row][0].date;
                 if (_this.colWeekNumbersVisible) {
                     return '' +
-                        '<td class="fc-week-number" ' + _this.weekNumberStyleAttr() + '>' +
+                        '<td className="fc-week-number" ' + _this.weekNumberStyleAttr() + '>' +
                         core.buildGotoAnchorHtml(// aside from link, important for matchCellWidths
                         _this, { date: weekStart, type: 'week', forceOff: dayGrid.colCnt === 1 }, dateEnv.format(weekStart, WEEK_NUM_FORMAT$1) // inner HTML
                         ) +
@@ -1321,7 +1321,7 @@ Docs & License: https://fullcalendar.io/
             _this.renderDayGridBgIntroHtml = function () {
                 var theme = _this.theme;
                 if (_this.colWeekNumbersVisible) {
-                    return '<td class="fc-week-number ' + theme.getClass('widgetContent') + '" ' + _this.weekNumberStyleAttr() + '></td>';
+                    return '<td className="fc-week-number ' + theme.getClass('widgetContent') + '" ' + _this.weekNumberStyleAttr() + '></td>';
                 }
                 return '';
             };
@@ -1329,7 +1329,7 @@ Docs & License: https://fullcalendar.io/
             // Affects mirror-skeleton and highlight-skeleton rows.
             _this.renderDayGridIntroHtml = function () {
                 if (_this.colWeekNumbersVisible) {
-                    return '<td class="fc-week-number" ' + _this.weekNumberStyleAttr() + '></td>';
+                    return '<td className="fc-week-number" ' + _this.weekNumberStyleAttr() + '></td>';
                 }
                 return '';
             };
@@ -1377,17 +1377,17 @@ Docs & License: https://fullcalendar.io/
         DayGridView.prototype.renderSkeletonHtml = function () {
             var theme = this.theme;
             return '' +
-                '<table class="' + theme.getClass('tableGrid') + '">' +
+                '<table className="' + theme.getClass('tableGrid') + '">' +
                 (this.opt('columnHeader') ?
-                    '<thead class="fc-head">' +
+                    '<thead className="fc-head">' +
                         '<tr>' +
-                        '<td class="fc-head-container ' + theme.getClass('widgetHeader') + '">&nbsp;</td>' +
+                        '<td className="fc-head-container ' + theme.getClass('widgetHeader') + '">&nbsp;</td>' +
                         '</tr>' +
                         '</thead>' :
                     '') +
-                '<tbody class="fc-body">' +
+                '<tbody className="fc-body">' +
                 '<tr>' +
-                '<td class="' + theme.getClass('widgetContent') + '"></td>' +
+                '<td className="' + theme.getClass('widgetContent') + '"></td>' +
                 '</tr>' +
                 '</tbody>' +
                 '</table>';

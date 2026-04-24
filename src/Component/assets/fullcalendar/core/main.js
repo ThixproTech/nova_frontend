@@ -6085,11 +6085,11 @@ Docs & License: https://fullcalendar.io/
                                     buttonAriaAttr = '';
                                 }
                                 else if (buttonIcon) {
-                                    buttonInnerHtml = "<span class='" + buttonIcon + "'></span>";
+                                    buttonInnerHtml = "<span className='" + buttonIcon + "'></span>";
                                     buttonAriaAttr = ' aria-label="' + buttonName + '"';
                                 }
                                 buttonEl = htmlToElement(// type="button" so that it doesn't submit a form
-                                '<button type="button" class="' + buttonClasses.join(' ') + '"' +
+                                '<button type="button" className="' + buttonClasses.join(' ') + '"' +
                                     buttonAriaAttr +
                                     '>' + buttonInnerHtml + '</button>');
                                 buttonEl.addEventListener('click', buttonClick);
@@ -8058,7 +8058,7 @@ Docs & License: https://fullcalendar.io/
                 classNames.push('fc-' + type.toLowerCase());
             }
             return '<' + this.fillSegTag +
-                (classNames.length ? ' class="' + classNames.join(' ') + '"' : '') +
+                (classNames.length ? ' className="' + classNames.join(' ') + '"' : '') +
                 (css ? ' style="' + cssToStr(css) + '"' : '') +
                 '></' + this.fillSegTag + '>';
         };
@@ -8222,7 +8222,7 @@ Docs & License: https://fullcalendar.io/
             classNames.push('fc-' + DAY_IDS[dateMarker.getUTCDay()]); // only add the day-of-week class
         }
         return '' +
-            '<th class="' + classNames.join(' ') + '"' +
+            '<th className="' + classNames.join(' ') + '"' +
             ((isDateValid && datesRepDistinctDays) ?
                 ' data-date="' + dateEnv.formatIso(dateMarker, { omitTime: true }) + '"' :
                 '') +
@@ -8246,8 +8246,8 @@ Docs & License: https://fullcalendar.io/
         function DayHeader(context, parentEl) {
             var _this = _super.call(this, context) || this;
             parentEl.innerHTML = ''; // because might be nbsp
-            parentEl.appendChild(_this.el = htmlToElement('<div class="fc-row ' + _this.theme.getClass('headerRow') + '">' +
-                '<table class="' + _this.theme.getClass('tableGrid') + '">' +
+            parentEl.appendChild(_this.el = htmlToElement('<div className="fc-row ' + _this.theme.getClass('headerRow') + '">' +
+                '<table className="' + _this.theme.getClass('tableGrid') + '">' +
                 '<thead></thead>' +
                 '</table>' +
                 '</div>'));

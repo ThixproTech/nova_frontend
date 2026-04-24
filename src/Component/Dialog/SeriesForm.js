@@ -573,14 +573,14 @@ const SeriesForm = (props) => {
           ) : (
             <>
               <div className="iq-card mb-3">
-                <div class="iq-card-header">
+                <div className="iq-card-header">
                   <div className="card-title">Import Contents From IMDB</div>
                 </div>
 
-                <div class="iq-card-body d-flex  mt-3">
-                  <div class="col-lg-5">
+                <div className="iq-card-body d-flex  mt-3">
+                  <div className="col-lg-5">
                     <input
-                      class="form-control"
+                      className="form-control"
                       id="imdb_id"
                       type="text"
                       placeholder="Enter IMDB ID. Ex:tt0120338"
@@ -593,9 +593,9 @@ const SeriesForm = (props) => {
                   <p className="align-items-center col-lg-1 d-flex fw-bold justify-content-center mb-0 text-center">
                     OR
                   </p>
-                  <div class="col-lg-5 ">
+                  <div className="col-lg-5 ">
                     {/* <input
-                      class="form-control"
+                      className="form-control"
                       id="imdb_id"
                       type="text"
                       placeholder="Enter Movie Title"
@@ -631,8 +631,8 @@ const SeriesForm = (props) => {
                     </div>
                   </div>
                 </div>
-                <div class="row justify-content-center">
-                  <div class="col-lg-5">
+                <div className="row justify-content-center">
+                  <div className="col-lg-5">
                     <h6>
                       <p>
                         Find the IMDB ID from
@@ -668,7 +668,7 @@ const SeriesForm = (props) => {
                       <div className=" ">
                         <div className="p-3">
                           <div className="row p-0">
-                            <div class="col-6 form-group">
+                            <div className="col-6 form-group">
                               <label className="float-left styleForTitle movieForm">
                                 Title
                               </label>
@@ -1118,7 +1118,7 @@ const SeriesForm = (props) => {
                                             }}
                                           >
                                             <i
-                                              class="ri-add-box-fill"
+                                              className="ri-add-box-fill"
                                               style={{ fontSize: "30px" }}
                                             ></i>
                                           </button>
@@ -1207,7 +1207,7 @@ const SeriesForm = (props) => {
                         <div className="">
                           <div className="p-3">
                             <div className="row p-0">
-                              <div class="col-6 form-group">
+                              <div className="col-6 form-group">
                                 <label className="float-left styleForTitle movieForm">
                                   Title
                                 </label>
@@ -1424,7 +1424,7 @@ const SeriesForm = (props) => {
                                 )}
                               </div>
 
-                              <div class="col-12 form-group">
+                              <div className="col-12 form-group">
                                 <label
                                   htmlFor="description"
                                   className="styleForTitle  movieForm"
@@ -1563,7 +1563,7 @@ const SeriesForm = (props) => {
                                                 }}
                                               >
                                                 <i
-                                                  class="ri-add-box-fill"
+                                                  className="ri-add-box-fill"
                                                   style={{ fontSize: "30px" }}
                                                 ></i>
                                               </button>
@@ -1641,7 +1641,7 @@ const SeriesForm = (props) => {
                                 )}
                               </div>
 
-                              <div class="form-group pl-3">
+                              <div className="form-group pl-3">
                                 <label className="mt-3 movieForm">Image</label>
                                 <div className="d-flex justify-content-center align-item-center pointer-cursor">
                                   <>
@@ -1708,7 +1708,7 @@ const SeriesForm = (props) => {
                                               }}
                                             >
                                               <i
-                                                class="ri-add-box-fill"
+                                                className="ri-add-box-fill"
                                                 style={{ fontSize: "30px" }}
                                               ></i>
                                             </button>

@@ -193,15 +193,15 @@ const TvSeries = (props) => {
             <div className="col-sm-12">
               <div className="iq-card mb-5 mt-2 ">
                 <div className="iq-card-header d-flex justify-content-between ">
-                  <div class="iq-header-title w-50">
-                    <h4 class="card-title">Web Series</h4>
+                  <div className="iq-header-title w-50">
+                    <h4 className="card-title">Web Series</h4>
                   </div>
 
                   <div className="d-flex gap-2 w-50 justify-content-end">
-                    <div class="form-group mb-0 d-flex mr-3 ">
+                    <div className="form-group mb-0 d-flex mr-3 ">
                       <input
                         type="search"
-                        class="form-control"
+                        className="form-control"
                         id="input-search"
                         placeholder="Search"
                         aria-controls="user-list-table"
@@ -210,13 +210,13 @@ const TvSeries = (props) => {
                     </div>
                     <button
                       type="button"
-                      class="btn dark-icon btn-primary"
+                      className="btn dark-icon btn-primary"
                       data-bs-toggle="modal"
                       id="create-btn"
                       data-bs-target="#showModal"
                       onClick={insertOpen}
                     >
-                      <i class="ri-add-line align-bottom me-1 fs-6"></i> Add
+                      <i className="ri-add-line align-bottom me-1 fs-6"></i> Add
                     </button>
                   </div>
                 </div>
@@ -249,7 +249,7 @@ const TvSeries = (props) => {
                       role="grid"
                       aria-describedby="user-list-page-info"
                     >
-                      <thead class="text-nowrap">
+                      <thead className="text-nowrap">
                         <tr>
                           <th className=" tableAlign">ID</th>
                           <th className=" tableAlign">Image</th>
@@ -354,17 +354,17 @@ const TvSeries = (props) => {
                                   </td> */}
                                   <td className="pr-3 tableAlign">
                                     {data?.type === "Premium" ? (
-                                      <div class="badge badge-pill badge-danger">
+                                      <div className="badge badge-pill badge-danger">
                                         {data?.type}
                                       </div>
                                     ) : (
-                                      <div class="badge badge-pill badge-info">
+                                      <div className="badge badge-pill badge-info">
                                         {data?.type}
                                       </div>
                                     )}
                                   </td>
                                   <td className="pr-3 tableAlign">
-                                    {/* <input type={checkbox} class="custom-control-input bg-primary" id="customSwitch01" /> */}
+                                    {/* <input type={checkbox} className="custom-control-input bg-primary" id="customSwitch01" /> */}
                                     <Switch
                                       checked={data?.isNewRelease}
                                       onChange={(e) =>
@@ -419,7 +419,7 @@ const TvSeries = (props) => {
                                         onClick={() => MovieDetails(data?._id)}
                                       >
                                         <i
-                                          class="ri-information-line"
+                                          className="ri-information-line"
                                           style={{ fontSize: "19px" }}
                                         ></i>
                                       </button>
@@ -443,7 +443,7 @@ const TvSeries = (props) => {
                                         onClick={() => deleteOpen(data?._id)}
                                       >
                                         <i
-                                          class="ri-delete-bin-6-line"
+                                          className="ri-delete-bin-6-line"
                                           style={{ fontSize: "19px" }}
                                         ></i>
                                       </button>

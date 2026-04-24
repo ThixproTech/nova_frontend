@@ -68,27 +68,27 @@ const Faq = (props) => {
 
   return (
     <>
-      <div id="content-page" class="content-page">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="iq-card">
-                <div class="iq-card-body admininfo">
-                  <div class="iq-edit-list">
-                    <ul class="iq-edit-profile d-flex nav nav-pills">
-                      <li class="col-md-6 p-0">
+      <div id="content-page" className="content-page">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-3">
+              <div className="iq-card">
+                <div className="iq-card-body admininfo">
+                  <div className="iq-edit-list">
+                    <ul className="iq-edit-profile d-flex nav nav-pills">
+                      <li className="col-md-6 p-0">
                         <a
-                          class="nav-link active"
+                          className="nav-link active"
                           data-toggle="pill"
                           href="#personal-information"
                         >
                           FAQ
                         </a>
                       </li>
-                      <li class="col-md-6 p-0">
+                      <li className="col-md-6 p-0">
                         <NavLink
                           to="/admin/help_center/contact_us"
-                          class="nav-link"
+                          className="nav-link"
                           data-toggle="pill"
                         >
                           Contact Us
@@ -105,13 +105,13 @@ const Faq = (props) => {
                   <div>
                     <button
                       type="button"
-                      class="btn dark-icon btn-primary"
+                      className="btn dark-icon btn-primary"
                       data-bs-toggle="modal"
                       id="create-btn"
                       data-bs-target="#showModal"
                       onClick={handleOpen}
                     >
-                      <i class="ri-add-line align-bottom me-1 fs-6"></i> Add
+                      <i className="ri-add-line align-bottom me-1 fs-6"></i> Add
                     </button>
                   </div>
                   <FaqDialog />
@@ -123,14 +123,14 @@ const Faq = (props) => {
                       return (
                         <>
                           <div className="col-md-6 mt-4">
-                            <div class="iq-accordion career-style faq-style">
-                              <div class="iq-card iq-accordion-block accordion ">
-                                <div class="active-faq clearfix">
-                                  <div class="container m-0">
-                                    <div class="row">
-                                      <div class="col-sm-12">
+                            <div className="iq-accordion career-style faq-style">
+                              <div className="iq-card iq-accordion-block accordion ">
+                                <div className="active-faq clearfix">
+                                  <div className="container m-0">
+                                    <div className="row">
+                                      <div className="col-sm-12">
                                         <a
-                                          class="accordion-title"
+                                          className="accordion-title"
                                           href={() => false}
                                         >
                                           <span> {data?.question} </span>
@@ -139,10 +139,10 @@ const Faq = (props) => {
                                     </div>
                                   </div>
                                 </div>
-                                <div class="accordion-details">
-                                  <p class="mb-0">{data?.answer} </p>
+                                <div className="accordion-details">
+                                  <p className="mb-0">{data?.answer} </p>
                                 </div>
-                                <div class="contact-card-buttons d-flex justify-content-end pr-2 pb-1">
+                                <div className="contact-card-buttons d-flex justify-content-end pr-2 pb-1">
                                   <button
                                     type="button"
                                     className="btn iq-bg-primary btn-sm mr-2"
@@ -160,7 +160,7 @@ const Faq = (props) => {
                                     onClick={() => handleDelete(data._id)}
                                   >
                                     <i
-                                      class="ri-delete-bin-6-line"
+                                      className="ri-delete-bin-6-line"
                                       style={{ fontSize: '19px' }}
                                     ></i>
                                   </button>
